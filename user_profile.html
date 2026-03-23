@@ -4,116 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-      }
-
-      body {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(135deg, #021c14, #053b2a, #021c14);
-        color: white;
-            }
-
-      /* Card */
-      .container {
-        width: 450px;
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        padding: 35px;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      }
-
-      h1 {
-        text-align: center;
-        margin-bottom: 25px;
-        font-weight: 500;
-      }
-
-      /* Progress bar */
-      .progress-bar {
-        width: 100%;
-        height: 8px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        margin-bottom: 25px;
-      }
-
-      .progress {
-        height: 100%;
-        width: 0%;
-        background: #c7a46a;
-        border-radius: 20px;
-        transition: 0.4s;
-      }
-
-      /* Inputs */
-      .input-group {
-        margin-bottom: 15px;
-      }
-
-      label {
-        display: block;
-        margin-bottom: 5px;
-        font-size: 14px;
-        opacity: 0.8;
-      }
-
-      input {
-        width: 100%;
-        padding: 10px;
-        border: none;
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.08);
-        color: white;
-        outline: none;
-      }
-
-      /* Buttons */
-      button {
-        margin-top: 10px;
-        width: 100%;
-        padding: 12px;
-        border: none;
-        border-radius: 8px;
-        background: #c7a46a;
-        color: #021c14;
-        font-weight: 600;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-
-      button:hover {
-        background: #e6c487;
-      }
-hi
-      /* Hide sections */
-      .section {
-        display: none;
-      }
-
-      /* Profile summary */
-      .profile-summary {
-        margin-top: 20px;
-        background: rgba(0, 0, 0, 0.25);
-        padding: 20px;
-        border-radius: 10px;
-        display: none;
-      }
-
-      .profile-summary div {
-        margin-bottom: 8px;
-        font-size: 14px;
-      }
-    </style>
+    <link rel="stylesheet" href="profile_styles.css">
+    
   </head>
 
   <body>
@@ -231,3 +123,4 @@ hi
     </script>
   </body>
 </html>
+
