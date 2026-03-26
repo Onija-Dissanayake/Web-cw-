@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life on Land - Home</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css">
+
+    <!-- Embedded CSS -->
+    <style>
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item span {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            text-align: center;
+            padding: 5px;
+        }
+        .center-section{
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .card-title{
+            text-align: center;
+            text-decoration: underline;
+        }
+        .card-list{
+            width: fit-content;
+            margin: 0 auto;         
+            text-align: left;        
+            list-style-position: inside; 
+        }
+        
+        
+        
+        
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="pill">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Forest representing life on land">
+        <h1>Life on Land</h1>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul class="navigation-links">
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="ais.html">Action Impact Simulator</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="profile.html">User Profile</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="team.html">Team Page</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+    </nav>
+</header>
+
+<hr>
+
+<!-- MAIN CONTENT -->
+<main>
+
+    <!-- INTRO -->
+    <section class="center-section">
+        <h2>Why Life on Land Matters</h2>
+        <br>
+        <p>
+            Life on Land focuses on protecting forests, wildlife, and ecosystems.
+            As individuals, we can take simple actions to protect biodiversity and ensure a sustainable future.
+        </p>
+    </section>
+
+    <br>
+    <br>
+
+    <!-- CARDS -->
+    <section class="card-container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Forest conservation">
+            <br>
+            <h3 class="card-title">Protect Forests</h3>
+            <br>
+            <p>Forests support biodiversity and regulate climate. Protecting them ensures a healthier planet.</p>
+            <br>
+            <ul class="card-list">
+                <li>Plant trees</li>
+                <li>Reduce paper usage</li>
+                <li>Support eco-friendly products</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wildlife protection">
+            <br>
+            <h3 class="card-title">Save Wildlife</h3>
+            <br>
+            <p>Animals play a key role in ecosystems. Protecting them helps maintain ecological balance.</p>
+            <br>
+            <ul class="card-list">
+                <li>Avoid wildlife exploitation</li>
+                <li>Support conservation efforts</li>
+                <li>Raise awareness</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1758599668234-68f52db62425?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Land restoration">
+            <br>
+            <h3 class="card-title">Restore Land</h3>
+            <br>
+            <p>Land degradation harms ecosystems. Restoration helps rebuild natural habitats.</p>
+            <br>
+            <ul class="card-list">
+                <li>Recycle waste</li>
+                <li>Reduce pollution</li>
+                <li>Join clean-up programs</li>
+            </ul>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>Life on Land Project</p>
+
+    <div class="footer-links">
+        <a href="pageEditor_ST1.html">Page Editor</a> |
+        <a href="validation_ST1.html">Validation</a>
+    </div>
+
+    <p>Created by: Thisal Pathirana</p>
+
+    <a href="#">Accessibility Statement</a>
+</footer>
+
+</body>
+</html>
