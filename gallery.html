@@ -145,12 +145,12 @@
 
     <div class="gallery">
 
-        <div class="gallery-item" data-title="Forests" data-desc="Forests are vital for biodiversity and climate balance." data-img="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"">
+        <div class="gallery-item" data-title="Forests" data-desc="Forests are vital for biodiversity and climate balance." data-img="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
             <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Forest">
             <p>Forests</p>
         </div>
 
-        <div class="gallery-item" data-title="Wildlife" data-desc="Wildlife plays a crucial role in ecosystems." data-img=https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <div class="gallery-item" data-title="Wildlife" data-desc="Wildlife plays a crucial role in ecosystems." data-img="https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
             <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wildlife">
             <p>Wildlife</p>
         </div>
@@ -212,6 +212,11 @@ items.forEach(item => {
         modalImg.src = item.dataset.img;
         modalTitle.textContent = item.dataset.title;
         modalDesc.textContent = item.dataset.desc;
+
+        //to reset styles
+        const modalBox = document.querySelector(".modal-content");
+        modalBox.style.background = "white";
+        modalBox.style.fontFamily = "Arial";
     });
 });
 
@@ -232,9 +237,20 @@ document.getElementById("colorBtn").onclick = () => {
     document.querySelector(".modal-content").style.background = "#c7a46a";
 };
 
+// user customization
 document.getElementById("fontBtn").onclick = () => {
-    document.querySelector(".modal-content").style.fontFamily = "cursive";
+    const box = document.querySelector(".modal-content");
+
+    
+    if (box.style.fontFamily === "Poppins", "sans-serif") {
+        
+        box.style.fontFamily = "'Courier New', monospace";
+    } else {
+        
+        box.style.fontFamily = "Poppins", "sans-serif";
+    }
 };
+
 </script>
 
 
