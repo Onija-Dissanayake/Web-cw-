@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Welcome</title>
+
+<meta http-equiv="refresh" content="4;http://127.0.0.1:5500/home.html">
+
+
+<style>
+
+body {
+    
+    background-image: url("https://media.istockphoto.com/id/2178816425/video/aerial-top-down-view-of-tropical-jungle-green-rainforest-4k.avif?s=640x640&k=20&c=BRMSDCDmb_Xk9PamLQ_HtwCqq8oyZxLbumQee5-9lh4=");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+    margin: 10;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    transition: opacity 0.5s ease;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 70px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 3px 3px 6px;
+}
+
+p {
+    font-family: Oswald, sans-serif;
+    font-size: 30px;
+}
+
+ul {
+    font-size: 25px;
+    list-style: none;
+}
+
+
+.loader {
+    border: 5px solid #fff;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: white;
+    color: rgb(0, 128, 19);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+    <h1>Life On Land</h1>
+
+    <p>Protecting ecosystems, forests and biodiversity for a sustainable future.</p>
+
+    <ul>
+        <li>Thisal</li>
+        <li>Pasindu</li>
+        <li>Rusira</li>
+        <li>Onija</li>
+
+    </ul>
+
+    <div class="loarder"></div>
+
+    <p id="countdown">Entering site in 4...</p>
+
+    <button onclick="skip()">Skip Intro</button>
+
+    <script>
+    //set starting time for countdown
+    let time = 4;
+
+    //Run function every 1 second
+    let countdown = setInterval(function(){
+
+        time--; //decrease time by 1
+
+        //update countdown text on screen
+        document.getElementById("countdown").textContent = "Entering site in " + time + "...";
+
+        //stop timer when it reaches 0
+        if(time === 0){
+    clearInterval(countdown);
+
+    // fade out effect
+    document.body.style.opacity = "0";
+
+    // wait 0.5s then go to home page
+    setTimeout(function(){
+        window.location.href = "http://127.0.0.1:5500/home.html";
+    }, 500);
+}
+
+    },1000);
+    
+    function skip(){
+    clearInterval(countdown);
+
+    document.body.style.opacity = "0";
+
+    setTimeout(function(){
+        window.location.href = "http://127.0.0.1:5500/home.html";
+    }, 500);
+}
+
+</script>
+
+
+</body>
+</html>    
+
