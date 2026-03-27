@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #021c14, #053b2a, #021c14);
     color: #333;
 }
