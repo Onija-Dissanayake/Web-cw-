@@ -13,7 +13,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 75vh;;
+        height: 85vh;;
         
       }
 
@@ -52,6 +52,10 @@
         color: #021c14;
         font-weight: 600;
         cursor: pointer;
+      }
+
+      button:hover {
+        background: #e6c487;
       }
 
       .reset {
@@ -96,7 +100,11 @@
         font-size: 12px;
       }
 
-      .profile-summary {
+      .step.active{
+        background:#c7a46a;
+      }
+
+      #summary {
         margin-top: 20px;
         background: rgba(0, 0, 0, 0.25);
         padding: 20px;
@@ -107,7 +115,14 @@
       .profile-summary div {
         margin-bottom: 6px;
         font-size: 14px;
+        padding: 1px;
       }
+
+      h3 {
+        margin-bottom: 15px;
+      } 
+
+
     </style>
   </head>
 
@@ -123,12 +138,12 @@
     <nav>
         <ul class="navigation-links">
             <li><a href="home.html" >Home</a></li>
-            <li><a href="ais.html">Action Impact Simulator</a></li>
+            <li><a href="ais.html">AIS</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="user_profile.html" class="active">User Profile</a></li>
             <li><a href="feedback.html">Feedback</a></li>
             <li><a href="team.html">Team Page</a></li>
-            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="sitemap.html">Site map</a></li>
         </ul>
     </nav>
 </header>
@@ -152,13 +167,13 @@
       </div>
 
       <div class="progress-text" id="progressText">
-        Completion: 0% (0/9 prompts completed)
+        Completion: 0%
       </div>
 
       <div class="steps">
-        <div class="step">Step 1: Basics</div>
-        <div class="step">Step 2: Interests</div>
-        <div class="step">Step 3: Actions</div>
+        <div class="step" id="step1">Step 1: Basics</div>
+        <div class="step" id="step2">Step 2: Interests</div>
+        <div class="step" id="step3">Step 3: Actions</div>
       </div>
 
       <div class="profile-summary" id="summary">
@@ -198,61 +213,68 @@
     <script>
       let completedPrompts = 0;
 
+      let name, username, area, activity, ecosystem, animal, recycle, action, goal; 
+
       function updateProgress() {
         let percent = (completedPrompts / 9) * 100;
         document.getElementById("progress").style.width = percent + "%";
         document.getElementById("progressText").innerText =
-          "Completion: " + Math.round(percent) + "% (" + completedPrompts + "/9 prompts completed)";
+          "Completion: " + Math.round(percent) + "%";
       }
 
-      function delay(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
+      function startProfile() {
+        if (completedPrompts === 0) {
+          step1();
+        } else if (completedPrompts === 9) {
+          alert("Your profile is already complete! You can reset to start over.");
+        }
       }
 
-      async function startProfile() {
+      function step1(){ 
         /* STEP 1 */
-        let name = prompt("Enter your name");
-        completedPrompts++;
+         name = prompt("What is your name?");
+         username = prompt("Choose a username:");
+         area = prompt("Where are you from?");
+
+        completedPrompts+=3; 
         updateProgress();
 
-        let username = prompt("Choose a username");
-        completedPrompts++;
-        updateProgress();
+        document.getElementById("step1").classList.add("active");
 
-        let area = prompt("Enter your local area");
-        completedPrompts++;
-        updateProgress();
+        setTimeout(step2, 200);
+      }
 
-        await delay(200);
-
+      function step2(){
         /* STEP 2 */
-        let activity = prompt("Favourite nature activity?");
-        completedPrompts++;
+         activity = prompt("Favourite nature activity?");
+         ecosystem = prompt("Favourite ecosystem?");
+         animal = prompt("Favourite wildlife animal?");
+        completedPrompts+=3; 
         updateProgress();
 
-        let ecosystem = prompt("Favourite ecosystem?");
-        completedPrompts++;
-        updateProgress();
+        document.getElementById("step2").classList.add("active");
 
-        let animal = prompt("Favourite wildlife animal?");
-        completedPrompts++;
-        updateProgress();
+        setTimeout(step3, 200);
 
-        await delay(200);
+      }
+
+      function step3(){
+        
 
         /* STEP 3 */
-        let recycle = prompt("Do you recycle?");
-        completedPrompts++;
+         recycle = prompt("Do you recycle?");
+         action = prompt("How do you help the environment?");
+         goal = prompt("What environmental goal do you have?");
+
+        completedPrompts+=3;
         updateProgress();
 
-        let action = prompt("How do you help the environment?");
-        completedPrompts++;
-        updateProgress();
+        document.getElementById("step3").classList.add("active");
 
-        let goal = prompt("What environmental goal do you have?");
-        completedPrompts++;
-        updateProgress();
+        setTimeout(showSummary, 200);
+    }
 
+      function showSummary(){
         /* SHOW SUMMARY */
         document.getElementById("summary").style.display = "block";
 
