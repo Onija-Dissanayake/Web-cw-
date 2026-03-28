@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width = device-width, initial-scale = 1.0">
+        <title>Life on Land</title>
+        <!--global css-->
+        <link rel = "stylesheet" href="global.css">
+        <style>
+            .heading h1{
+                text-align: center;
+                color: white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin: 10px 0;
+            }
+
+            .filter-bar {
+                width: 25%;
+                margin: 20px auto;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .filter-bar label {
+                color: white;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            .filter-bar select {
+                padding: 8px 12px;
+                border-radius: 8px;
+                border: none;
+                outline: none;
+                background-color: rgba(223, 254, 220, 0.8);
+                font-size: 14px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            .filter-bar select:hover {
+                background-color: rgba(200, 240, 200, 1);
+            }
+
+            .filter-bar select:focus {
+                box-shadow: 0 0 5px rgba(0, 255, 100, 0.7);
+            }
+
+            #programs{
+                width: 80%;
+                height: 500px;        
+                margin: 0 auto;
+                overflow-y: scroll;
+            }
+            .programsec1,.programsec2{
+                width: 100%;
+                height: 100%;
+                display: flex;
+            }
+
+            .programsec1{
+                border-bottom: 5px;
+            }
+
+            .programsec2{
+                border-top: 5px;
+            }
+
+            .program{
+                width: 45%;
+                height: 450px;
+                text-align: center;
+                margin: 10px 2.5%;
+                background-color: rgba(223, 254, 220, 0.7);
+                border-radius: 10px;
+            }
+            .program img{
+                width: 100%;
+                height: 60%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 10px 10px 0 0;
+            }
+            .program h2{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: rgba(38, 119, 30, 0.7);
+                font-weight: 500;
+                font-size: 20px;
+                margin: 2px 0px;
+            }
+
+            .program p{
+                color: #000000;
+            }
+            .program ul{
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                list-style: none;
+            }
+            .program ul li{
+                width: 40%;
+                padding: 3px;
+                background-color: rgba(6, 39, 69, 0.558);
+                border-radius: 10px;
+                margin: 0 5%;
+            }
+            .program ul li a{
+                text-decoration: none;
+                color: azure;
+            }
+
+            .program:hover{
+                transform: scale(1.05) ;
+                cursor: pointer;
+                box-shadow: 0 0 15px #4c7467;
+            }
+
+            .program ul li:hover{
+                background-color: #40675a;
+            }
+            .reviews{
+                max-width: 900px;
+                margin: auto;
+            }
+
+            .overall-rating {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .overall-rating h1 {
+                font-size: 42px;
+                color: #a8ddb8;
+                margin: 5px 0;
+            }
+
+            .overall-rating p {
+                color: #b4b2b2;
+            }
+
+            .reviews-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 20px;
+            }
+
+            .review-card {
+                background: #88c493;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+                color: black;
+                
+            }
+
+            .review-card a{
+                color:rgb(0, 102, 255);
+            }
+
+            .review-footer {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                color: #4b4949;
+            }
+
+            h2{
+                text-align: center;
+                margin-bottom: 10px;
+
+            }
+
+            fieldset{
+                width: 500px;
+                margin: 20px auto;
+                border: 2px solid #ccc;
+                padding: 30px;
+                border-radius: 10px;
+            }
+
+            legend{
+                font-weight: 1000;
+                font-size: larger;
+                color: #a8ddb8;
+            }
+
+
+            input {
+                border: 1px solid #ccc;
+                outline: none;
+                background-color: #88c493;           
+            }
+
+            input ::placeholder{
+                color: #000000;
+            }
+
+            .personalinfo input{
+                width: 100%;
+                padding: 8px 8px;
+                border-radius: 5px;
+            }
+
+            .personalinfo input:focus{
+                border-color: rgb(102, 255, 0);
+                outline: none;
+            }
+
+            textarea{
+                width: 100%;
+                padding: 10px;
+                margin: 7px 0;
+                background-color:#88c493;
+            }
+
+            select{
+                width: 50%;
+                padding: 8px;
+                margin: 2px;
+                background-color:#88c493 ;
+            }
+
+            input[type="date"]{
+                width: 50%;
+                padding: 8px;
+                margin: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Header-->
+        <header>
+            <div class="pill"><img src="https://images.unsplash.com/vector-1748666315230-abc90c68716f?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Life on Land">
+                <span><h1>Life on Land</h1></span>
+            
+            
+            </div>
+            
+        <!--navigation-->
+            <nav>
+                <ul class ="navigation-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="ais.html">Action Impact Simulator</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="user.html">User Profile</a></li>
+                    <li><a href="feedback.html" class="active">Feedback</a></li>
+                    <li><a href="team.html">Team Page</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+
+                </ul>
+            </nav>
+            <hr>
+        </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+       <div class="heading">
+        <h1>Programs</h1>
+        </div>
+        <div class="filter-bar">
+                <label for="filter">Sort by:</label>
+                <select id="filter">
+                    <option>Most Popular</option>
+                    <option>Nearest</option>
+                    <option>Student-Friendly</option>
+                    <option>Shortest Duration</option>
+                </select>
+            </div>
+
+            <div id="programs">
+                <section class="programsec1">
+                    <div class="program">
+                        <img src="Images/Tree_Plantation.jpg" alt="Tree_Plantation">
+                        <h2>Tree Plantation Program</h2>
+                        <h2>Time Duration : 12hours</h2><br>
+                        <p>Organizing community or school-based tree planting activities to restore forests, improve biodiversity, and reduce climate change impacts.</p><br>
+                        <ul>
+                            <li><a href="#">More-Details</a></li>
+                            <li><a href="#">Join Now</a></li>
+                        </ul>
+                    </div>
+                    <div class="program">
+                        <img src="Images/Elephants.jpg" alt="Elephants">
+                        <h2>Wildlife Conservation Programs</h2>
+                        <h2>Time Duration : 16hours</h2><br>
+                        <p>Projects focused on protecting endangered animals, preventing poaching, and preserving natural habitats</p><br>
+                        <ul>
+                            <li><a href="#">More-Details</a></li>
+                            <li><a href="#">Join Now</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="programsec2">
+                    <div class="program">
+                        <img src="Images/Agriculture.jpg" alt="Agriculture">
+                        <h2>Sustainable Agriculture Programs</h2>
+                        <h2>Time Duration : 4hours</h2><br>
+                        <p>Encouraging eco-friendly farming methods like organic farming, crop rotation, and reduced chemical usage.</p><br>
+                        <ul>
+                            <li><a href="#">More-Details</a></li>
+                            <li><a href="#">Join Now</a></li>
+                        </ul>
+                    </div>
+                    <div class="program">
+                        <img src="Images/Anti_Deforestation.jpg" alt="Anti-Deforestation">
+                        <h2>Anti-Deforestation Campaign</h2>
+                        <h2>Time Duration : 5hours</h2><br>
+                        <p>Programs that work to reduce illegal logging and promote sustainable use of forest resources.</p><br>
+                        <ul>
+                            <li><a href="#">More-Details</a></li>
+                            <li><a href="#">Join Now</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div><br>
+        <div class="reviews">
+            <h2>Ratings & Reviews</h2>
+
+            <div class="overall-rating">
+                <h1>8.6/10 Excellent</h1>
+                <p>Based on 120 reviews</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <h4>• Great experience!</h4>
+                    <p>Learned a lot about protecting forests and wildlife. Very inspiring.<a href="#">See more</a></p>
+                    <div class="review-footer">
+                    <p>Alex • March 2026 | Rating: 9/10</p>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <h4>• Very comfortable</h4>
+                    <p>Easy to understand and focused on caring for nature and land.<a href="#">See more</a></p>
+                    <div class="review-footer">
+                    <p>Sara • Feb 2026 | Rating: 8/10</p>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <h4>• Highly Recommend</h4>
+                    <p>Useful information about conservation, but could include more details.<a href="#">See more</a></p>
+                    <div class="review-footer">
+                    <p>John • Jan 2026 | Rating: 9/10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="form">
+            <br>
+            <h2>Your Feedback</h2>
+            <form id="feedbackForm" method="post">
+                <fieldset>
+                    <legend>Personal Informations</legend>
+                    
+                    <div class="personalinfo">
+                        <label>Full Name:</label><br>
+                        <input type="text" id="Full Name" placeholder="Enter your full name here" required><br>
+                        <br>
+                        <span class="error" id="nameError"></span>
+
+                        <label>Email:</label><br>
+                        <input type="email" id="Email" placeholder="Enter your email here" required><br>
+                        <br>
+                        <span class="error" id="emailError"></span>
+
+                        <label>Phone Number:</label><br>
+                        <input type="tel" id="Phone no." placeholder="Enter your phone number here" required><br>
+                    <br>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Feedback</legend>
+
+                    <lable>Message:</lable><br>
+                    <textarea id="message" maxlength="150"></textarea><br>
+
+                    <p id="counter">150 characters remaining</p><br>
+
+                    <label>Category:</label><br>
+                    <select id="category">
+                        <option>General</option>
+                        <option>Programs</option>
+                        <option>Website</option>
+                    </select><br><br>
+
+                    <label>Date:</label><br>
+                    <input type="date" id="date">
+                </fieldset>
+
+                <div class="buttons">
+                    <button type="submit"><b>Send Your Feedback</b></button><br>
+                    <button type="reset"><b>Reset</b></button>
+                </div>
+                <br>
+                <p id="successM" class="success"></p>
+            </form>
+            <script>
+                // Character Counter
+                let message = document.getElementById("message");
+                let counter = document.getElementById("counter");
+
+                message.addEventListener("input", function() {
+                    let remaining = 150 - message.value.length;
+                    counter.textContent = remaining + " characters remaining";
+                });
+
+                // Form Validation
+                document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+
+                    e.preventDefault();
+
+                    let name = document.getElementById("Full Name").value.trim();
+                    let email = document.getElementById("Email").value.trim();
+
+                    let valid = true;
+
+                    // Clear previous errors
+                    document.getElementById("nameError").textContent = "";
+                    document.getElementById("emailError").textContent = "";
+                    document.getElementById("successM").textContent = "";
+
+                    // Name validation
+                    if (name === "") {
+                        document.getElementById("nameError").textContent = "Name is required";
+                        valid = false;
+                    }
+
+                    // Email validation
+                    if (email === "" || !email.includes("@")) {
+                        document.getElementById("emailError").textContent = "Enter a valid email";
+                        valid = false;
+                    }
+
+                    // Success message
+                    if (valid) {
+                        document.getElementById("successM").textContent = "Thank you! Your feedback has been submitted.";
+                    }
+                });
+            </script>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Life on Land Project</p>
+
+        <!--Note - Change to your own link-->
+        <div class="footer-links">
+            <a href="pageEditor_ST1.html">Page Editor</a> |
+            <a href="validation_ST1.html">Validation</a>
+        </div>
+
+        <p>Created by: Rusira Makumbura</p>
+
+        <a href="#">Accessibility Statement</a>
+    </footer>
+
+</body>
+</html>
