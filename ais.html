@@ -7,124 +7,124 @@
 <link rel="stylesheet" href="global.css">
 
 <style>
+body {
+    background: linear-gradient(135deg, #021c14, #053b2a, #021c14);
+    color: #333;
+}
 
-h2{
-        text-align:center;
-        color: #c7a46a;
-        text-shadow: 4px 4px 15px #000000;
-        
+    .a-cards{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
+    .a-cards img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
 
-.a-cards{
-    width: 90%;
-    margin: 0 auto;
+    #section1, #section2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin: 10px 0px;
+    }
+
+    .actionCards{
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(89, 187, 141, 0.6);
+        border-radius: 20px;
+        padding: 10px;
+        margin: 10px 10px;
+        width: 220px;
+        height: 320px;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .actionCards:hover{ 
+        transform: translateY(-8px) scale(1.05); 
+        transition: transform linear 0.3s; 
+        box-shadow:0 20px 35px rgba(0,0,0,0.3); 
+    }
+
+    .selected{
+        background-color: rgba(89, 187, 141, 0.95);
+        border: 2px solid rgba(30, 33, 32, 0.678);
+    }
+
+    h2,h5{ text-align: center; }
+    h3{ text-align: center; }
+    p{ text-align: center; }
+
+    #desc{ text-align: center; }
+
+    #feedbackSummary{
+        background-color: rgba(164, 224, 111, 0.473);
+        text-align: center;
+        border-radius: 20px;
+        padding: 90px;
+        margin-top: 3%;
+        margin-left:3%;
+        margin-right: 3%;
+    }
+
+    #impactScore{
+        margin-top: 0.01px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        background-color: transparent !important;
+    }
+
+    .ip{
+        width: 100%;
+        text-align: center;
+        border-radius: 10px;
+        padding: 2px 0px;
+        background-color: rgba(240, 255, 255, 0.671);
+        color: black;
+        margin-top: auto;
+    }
+
+img{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 30%;
+    clear: right;
 }
-
-.a-cards img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-#section1, #section2{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin: 10px 0px;
-}
-
-.actionCards{
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(89, 187, 141, 0.6);
-    border-radius: 20px;
-    padding: 10px;
-    margin: 10px 10px;
-    width: 220px;
-    height: 320px;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.actionCards:hover{ 
-    transform: translateY(-8px) scale(1.05); 
-    transition: transform linear 0.3s; 
-    box-shadow:0 20px 35px rgba(0,0,0,0.3); 
-}
-
-.selected{
-    background-color: rgba(89, 187, 141, 0.95);
-    border: 2px solid rgba(30, 33, 32, 0.678);
-}
-
-h2,h5{ text-align: center; }
-h3{ text-align: center; }
-p{ text-align: center; }
-
-#desc{ text-align: center; }
-
-#feedbackSummary{
-    background-color: rgba(164, 224, 111, 0.473);
-    text-align: center;
-    border-radius: 20px;
-    padding: 90px;
-    margin-top: 3%;
-    margin-left:3%;
-    margin-right: 3%;
-}
-
-#impactScore{
-    margin-top: 0.01px;
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    background-color: transparent !important;
-}
-
-.ip{
-    width: 100%;
-    text-align: center;
-    border-radius: 10px;
-    padding: 2px 0px;
-    background-color: rgba(240, 255, 255, 0.671);
-    color: black;
-    margin-top: auto;
-}
-
-
 
 /* Proper Progress Bar */
-#barContainer{
-    width: 85%;
-    height: 20px;
-    background-color: rgba(164, 224, 111, 0.2);
-    border-radius: 10px;
-    margin: 0 auto;
-    overflow: hidden;
-}
+    #barContainer{
+        width: 85%;
+        height: 20px;
+        background-color: rgba(164, 224, 111, 0.2);
+        border-radius: 10px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
 
-#bar{
-    height: 100%;
-    width: 0%;
-    background-color: rgba(89, 187, 141, 0.9);
-    transition: width 0.4s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 12px;
-}
+    #bar{
+        height: 100%;
+        width: 0%;
+        background-color: rgba(89, 187, 141, 0.9);
+        transition: width 0.4s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 12px;
+    }
 
-#des{ color: white; }
+    #des{ color: white; }
 </style>
 </head>
 
