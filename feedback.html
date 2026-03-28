@@ -19,7 +19,7 @@
                 margin: 20px auto;
                 display: flex;
                 justify-content: flex-end;
-                align-items: center;
+                align-items: right;
                 gap: 10px;
             }
 
@@ -274,7 +274,7 @@
             <div id="programs">
                 <section class="programsec1">
                     <div class="program">
-                        <img src="Images/Tree_Plantation.jpg" alt="Tree_Plantation">
+                        <img src="https://d2xf53q6y7b161.cloudfront.net/blog/1752663539.webp" alt="Tree_Plantation">
                         <h2>Tree Plantation Program</h2>
                         <h2>Time Duration : 12hours</h2><br>
                         <p>Organizing community or school-based tree planting activities to restore forests, improve biodiversity, and reduce climate change impacts.</p><br>
@@ -284,7 +284,7 @@
                         </ul>
                     </div>
                     <div class="program">
-                        <img src="Images/Elephants.jpg" alt="Elephants">
+                        <img src="https://i.natgeofe.com/k/78b20329-9758-42c3-baa4-10c613dd2820/baby-african-elephant.jpg?wp=1&w=1084.125&h=609" alt="Elephants">
                         <h2>Wildlife Conservation Programs</h2>
                         <h2>Time Duration : 16hours</h2><br>
                         <p>Projects focused on protecting endangered animals, preventing poaching, and preserving natural habitats</p><br>
@@ -296,7 +296,7 @@
                 </section>
                 <section class="programsec2">
                     <div class="program">
-                        <img src="Images/Agriculture.jpg" alt="Agriculture">
+                        <img src="https://img.freepik.com/free-photo/tractor-working-green-field_23-2151983626.jpg?semt=ais_incoming&w=740&q=80" alt="Agriculture">
                         <h2>Sustainable Agriculture Programs</h2>
                         <h2>Time Duration : 4hours</h2><br>
                         <p>Encouraging eco-friendly farming methods like organic farming, crop rotation, and reduced chemical usage.</p><br>
@@ -306,7 +306,7 @@
                         </ul>
                     </div>
                     <div class="program">
-                        <img src="Images/Anti_Deforestation.jpg" alt="Anti-Deforestation">
+                        <img src="https://magazine.columbia.edu/sites/default/files/styles/wysiwyg_full_width_image/public/2018-09/Wild-fires.jpg?itok=J13NLG_k" alt="Anti-Deforestation">
                         <h2>Anti-Deforestation Campaign</h2>
                         <h2>Time Duration : 5hours</h2><br>
                         <p>Programs that work to reduce illegal logging and promote sustainable use of forest resources.</p><br>
@@ -441,6 +441,11 @@
                     // Success message
                     if (valid) {
                         document.getElementById("successM").textContent = "Thank you! Your feedback has been submitted.";
+
+                        document.getElementById("feedbackForm").reset();
+
+                    counter.textContent = "150 characters remaining";
+
                     }
                 });
             </script>
