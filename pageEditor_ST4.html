@@ -1,267 +1,353 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Editor Student - provide your student name</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="global.css"> <!-- Global CSS link -->
-    <link rel="stylesheet" href="pageEditor_validator.css"> <!-- External CSS link -->
+<title>Page Editor - Onija Dissanayake</title>
 
-    <style>
-
-
-    </style>
+<link rel="stylesheet" href="global.css">
+<link rel="stylesheet" href="pageEditor_validator.css">
 
 </head>
+
 <body>
-    
-    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
 
-    <header id="top">
-        <div class="pill"><img src="https://images.unsplash.com/vector-1753953988678-284e5ea345d5?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Forest representing life on land">
-                <h1>Life on Land</h1>
-            
-            
-            </div>
-            
-        <!--navigation-->
-            <nav>
-                <ul class ="navigation-links">
-                    <li><a href="home.html" >Home</a></li>
-                    <li><a href="ais.html">AIS</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="user_profile.html">User Profile</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="team.html"class="active">Team Page</a></li>
-                    <li><a href="sitemap.html">Sitemap</a></li>
+<header id="top">
 
-                </ul>
-            </nav>
-    </header>
+<div class="pill">
+<img src="https://images.unsplash.com/vector-1753953988678-284e5ea345d5?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Forest representing life on land">
+<h1>Life on Land</h1>
+</div>
 
-    <section class="stud">
-        <h2>Student name, team name, student role</h2>
-    </section>
+<nav>
+<ul class="navigation-links">
+<li><a href="home.html">Home</a></li>
+<li><a href="ais.html">AIS</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="user_profile.html">User Profile</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+<li><a href="team.html">Team Page</a></li>
+<li><a href="sitemap.html">Sitemap</a></li>
+</ul>
+</nav>
 
-    <div class="container">
-        <!-- Main content area -->
-        <main>
+</header>
 
-            <!-- Update those first three sections for the pages you were responsible to implement -->
+<section class="stud">
+<h2>Onija Dissanayake – Student 4</h2>
+<p>Role: User Profile Page, Sitemap Page and Content Page Developer</p>
+</section>
 
-            <section>
-                <h2 id="home">Home page</h2>
-                    <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
-                    
-                    <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
-                    
-                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#splashVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+<div class="container">
 
-                    <h3>Link to the page</h3>
-                        <p><a href="splash.html">Include a link to the actual page you describe.</a></p>
-            </section>
+<main>
 
-            <section>
-                <h2 id="gallery">Gallery Page</h2>
-                    <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+<section>
+<h2 id="profile">User Profile Page</h2>
 
-                    <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+<h3>Technical Description</h3>
 
-                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#volunteerVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+<p>
+The User Profile page was developed using HTML, CSS and JavaScript to create an interactive profile creation system.
+Instead of using a traditional form, JavaScript prompt() functions were used to collect user information step by step.
+This allowed the profile information to be displayed dynamically as the user completed each prompt.
+</p>
 
-                        
-                    <h3>Link to the page</h3>
-                        <p><a href="volunteer.html">Include a link to the actual page you describe.</a></p>
-            </section>
+<p>
+The page structure was built using semantic HTML elements such as header, navigation, main, section and footer.
+These elements help organise the content and maintain consistency with the global website layout.
+JavaScript DOM manipulation was used to insert the user’s answers directly into the profile output area.
+</p>
 
-            <section>
-                <h2 id="content">Content Page</h2>
-                    <h3>Technical Description</h3>
-                        <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+<p>
+A progress indicator was implemented to show how much of the profile had been completed.
+Conditional logic allowed users to skip certain prompts or return to previously skipped questions.
+This improves usability and allows flexibility during profile creation.
+</p>
 
-                    <h3>Accessibility</h3>
-                        <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+<h3>Accessibility</h3>
 
-                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                        <p><a href="validation_ST0.html#contentVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+<p>
+Accessibility was considered by ensuring clear instructions were provided for all prompts.
+The page uses a structured heading hierarchy so screen readers can understand the page layout.
+Colour contrast and readable fonts were used to ensure the content is accessible to users with visual impairments.
+Navigation elements are also consistent with the rest of the website to improve usability.
+</p>
 
-                        
-                    <h3>Link to the page</h3>
-                        <p><a href="content.html">Include a link to the actual page you describe.</a></p>
-            </section>
+<h3>Link to the validation page</h3>
+<p><a href="validation_ST4.html#profileVal">View validation for the User Profile Page</a></p>
 
-            <section>
-                <h2 id="challenge"> Challenges and Lessons Learned</h2>
-                    <p>Detail any challenges encountered during the implementation process and explain how they were resolved. Reflect on the lessons learned from overcoming these challenges.</p> 
-            </section>
+<h3>Link to the page</h3>
+<p><a href="user_profile.html">Open the User Profile Page</a></p>
 
-            <section>
-                <h2 id="compliance"> Compliance</h2>
-                    <p>Discuss how the pages you have created are compliant with Janet regulations governing web page publication. This includes demonstrating your understanding and application of these regulations. Be realistic and truthful. <a href="https://intranet.ecs.westminster.ac.uk/modules/4COSC011W/compliance.html" target="_blank">See the lecture notes for more details on compliance.</a></p> 
+</section>
 
-                    
-            </section>
 
-            <section>
-                <h2 id="compliance"> Group Meetings and Individual Contribution Log</h2>
-                    <p>Include a Group Meetings and Contribution Log that documents your engagement with group work.</p> 
-                    Requirements:
-                        <ul> 
-                            <li>A minimum of six (6) group meetings must be recorded.</li>
-                            <li>Each student must provide their own account of the meetings.</li>
-                            <li>The log must focus on individual contribution, not just group activity.</li>
-                        </ul>
-                        <p>Feel free to follow the example table structure below:</p>
+<section>
 
-                        <table >
-    
-                            <thead>
-                                <tr>
-                                    <th colspan="6">Group Meetings and Contribution Log</th>
-                                </tr>
-                                <tr>
-                                    <th>Meeting</th>
-                                    <th>Date &amp; Time</th>
-                                    <th>Format</th>
-                                    <th>Objective</th>
-                                    <th>Attended</th>
-                                    <th>Your Individual Contribution</th>
-                                </tr>
-                            </thead>
-                        
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>3 Feb 2026</td>
-                                    <td>Face-to-face</td>
-                                    <td>Agree SDG and assign roles</td>
-                                    <td>Yes</td>
-                                    <td>I agreed to take responsibility for the Home Page and template.</td>
-                                </tr>
-                        
-                                <tr>
-                                    <td>2</td>
-                                    <td>17 Feb 2026</td>
-                                    <td>Online</td>
-                                    <td>Review Home Page design</td>
-                                    <td>Yes</td>
-                                    <td>I suggested the colour palette and card-based layout.</td>
-                                </tr>
-                        
-                                <tr>
-                                    <td>3</td>
-                                    <td>03 Mar 2026</td>
-                                    <td>Hybrid</td>
-                                    <td>Progress review</td>
-                                    <td>No</td>
-                                    <td>I reviewed meeting notes and followed up with tasks.</td>
-                                </tr>
-                        
-                                <tr>
-                                    <td>4</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                        
-                                <tr>
-                                    <td>5</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                        
-                                <tr>
-                                    <td>6</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                        
-                            </tbody>
-                        
-                        </table>
-                    
-            </section>
+<h2 id="sitemap">Sitemap Page</h2>
 
-            <section>
-                <h2 id="ref">References</h2>
-                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
-                    <ul class="ref">
-                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 11 Feb 2025).</li>
-                        <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc. Indianappolis.</i></li>
-                    </ul>
-            </section>
+<h3>Technical Description</h3>
 
-            <p class="top"><a href="#top">Go top</a></p>
-        </main>
+<p>
+The Sitemap page was implemented using Scalable Vector Graphics (SVG) to visually represent the structure of the website.
+Each webpage is represented using rectangular nodes connected with lines to illustrate the hierarchical structure of the site.
+</p>
 
-        <!-- Sidebar area -->
-        <aside>
-            <h3>Core pages developed:</h3>
+<p>
+SVG elements such as rectangles, lines and text were used to construct the diagram.
+Each page node was wrapped in a clickable link so users can navigate directly to the selected page.
+This allows the sitemap to function as both a visual diagram and a navigation tool.
+</p>
 
-        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
-            <ul class="top-level-ul">
-                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
-                <li>Student 1</li>
-                <ul>
-                        <li><a href="#home">Home page </a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#content">Content</a></li>
-                    </ul>
-                <li>Student 2</li>
-                <ul> 
-                    <li><a href="#">Splash Screen</a></li>
-                    <li><a href="#">Action Impact Simulator</a></li>
-                    <li><a href="#">Content</a></li>
-                </ul>
-                    
-                <li>Student 3</li>
-                    <ul>
-                        <li><a href="#">Feedback</a> </li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Content</a></li>
-                    </ul>
-                <li>Student 4</li>
-                    <ul>
-                        <li><a href="#">User Profile </a></li>
-                        <li><a href="#">Sitemap</a></li>
-                        <li><a href="#">Content</a></li>
-                    </ul>
-                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
-                <li><a href="#compliance">Compliance</a></li>
-                <li><a href="#group">Group Meetings and Individual Contribution Log</a></li>
-                <li><a href="#ref">References</a></li>
-            </ul>
-        </aside>
-    </div>
+<p>
+The SVG viewBox property was used to make the sitemap responsive.
+This ensures that the diagram scales correctly across different screen sizes while maintaining readability.
+CSS styling was also used to apply hover effects to nodes so users can easily identify clickable elements.
+</p>
 
-        <!-- FOOTER -->
+<h3>Accessibility</h3>
+
+<p>
+Accessibility was addressed by providing descriptive text labels inside each node.
+Title elements were added so screen readers can describe the purpose of each link.
+Keyboard navigation was also considered to ensure users can tab through sitemap links easily.
+Clear contrast between nodes and background colours improves readability.
+</p>
+
+<h3>Link to the validation page</h3>
+<p><a href="validation_ST4.html#sitemapVal">View validation for the Sitemap Page</a></p>
+
+<h3>Link to the page</h3>
+<p><a href="sitemap.html">Open the Sitemap Page</a></p>
+
+</section>
+
+
+<section>
+
+<h2 id="content">Content Page (Student 4)</h2>
+
+<h3>Technical Description</h3>
+
+<p>
+The content page was created to present information related to the Sustainable Development Goal “Life on Land”.
+The page structure uses semantic HTML elements including sections, headings, paragraphs and images to organise the information clearly.
+Internal navigation links were placed at the top of the page to allow users to jump directly to specific sections.
+</p>
+
+<p>
+CSS styling from the global stylesheet was used to maintain consistent colours, typography and layout across the website.
+Spacing and alignment were controlled using margin and padding properties.
+Images were added to visually support the written information and make the page more engaging for users.
+</p>
+
+<p>
+A “Go to Top” button was included to improve navigation on longer pages.
+This feature allows users to quickly return to the top of the page without scrolling manually.
+</p>
+
+<h3>Accessibility</h3>
+
+<p>
+Accessibility was addressed by using clear heading structures and meaningful text descriptions.
+All images include alternative text so screen readers can interpret their content.
+Colour contrast between background and text was carefully selected to ensure readability for all users.
+</p>
+
+<h3>Link to the validation page</h3>
+<p><a href="validation_ST4.html#contentVal">View validation for the Content Page</a></p>
+
+<h3>Link to the page</h3>
+<p><a href="content_ST4.html">Open the Content Page</a></p>
+
+</section>
+
+
+<section>
+
+<h2 id="challenge">Challenges and Lessons Learned</h2>
+
+<p>
+One of the main challenges during development was implementing the interactive User Profile page.
+Handling multiple prompts and updating the profile dynamically required careful use of JavaScript logic and DOM manipulation.
+Another challenge was designing the SVG sitemap layout so that all pages were clearly connected and visually balanced.
+</p>
+
+<p>
+Through solving these challenges, I gained a better understanding of how HTML, CSS and JavaScript work together
+to create interactive web pages. I also learned the importance of consistent design and usability across different pages of a website.
+</p>
+
+</section>
+
+
+<section>
+
+<h2 id="compliance">Compliance</h2>
+
+<p>
+The pages developed follow the guidelines for web publishing and accessibility.
+Semantic HTML elements were used to structure content properly and improve search engine indexing.
+External CSS stylesheets were used to separate design from structure, making the code easier to maintain.
+</p>
+
+<p>
+Images include alternative text descriptions and links are clearly labelled to improve accessibility.
+The pages were also tested using HTML validation tools to ensure they meet web standards and contain no structural errors.
+</p>
+
+</section>
+
+
+<section>
+
+<h2 id="group">Group Meetings and Individual Contribution Log</h2>
+
+<table>
+
+<thead>
+<tr>
+<th colspan="6">Group Meetings and Contribution Log</th>
+</tr>
+
+<tr>
+<th>Meeting</th>
+<th>Date & Time</th>
+<th>Format</th>
+<th>Objective</th>
+<th>Attended</th>
+<th>Your Individual Contribution</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>3 Feb 2026</td>
+<td>Face-to-face</td>
+<td>Discuss project topic and assign roles</td>
+<td>Yes</td>
+<td>I agreed to develop the User Profile Page and Sitemap Page.</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>10 Feb 2026</td>
+<td>Online</td>
+<td>Discuss website design and layout</td>
+<td>Yes</td>
+<td>I suggested ideas for the profile layout and sitemap structure.</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>17 Feb 2026</td>
+<td>Online</td>
+<td>Review progress</td>
+<td>Yes</td>
+<td>I presented the first version of the User Profile page.</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>24 Feb 2026</td>
+<td>Face-to-face</td>
+<td>Integration of pages</td>
+<td>Yes</td>
+<td>I worked on linking the sitemap nodes to each page.</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>5 Mar 2026</td>
+<td>Online</td>
+<td>Testing and improvements</td>
+<td>Yes</td>
+<td>I improved the sitemap layout and fixed navigation issues.</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>15 Mar 2026</td>
+<td>Online</td>
+<td>Final review</td>
+<td>Yes</td>
+<td>I completed the Page Editor and validated my pages.</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+<section>
+
+<h2 id="ref">References</h2>
+
+<ul class="ref">
+
+<li>
+Duckett, J. (2011) HTML and CSS: Design and Build Websites. John Wiley & Sons.
+</li>
+
+<li>
+W3Schools (2025) HTML Tutorial. Available at:
+<a href="https://www.w3schools.com/">https://www.w3schools.com/</a>
+</li>
+
+<li>
+MDN Web Docs (2025) SVG Basics. Available at:
+<a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a>
+</li>
+
+</ul>
+
+</section>
+
+<p class="top"><a href="#top">Go top</a></p>
+
+</main>
+
+
+<aside>
+
+<h3>Pages Developed by Me</h3>
+
+<ul class="top-level-ul">
+
+<li><a href="#profile">User Profile Page</a></li>
+<li><a href="#sitemap">Sitemap Page</a></li>
+<li><a href="#content">Content Page</a></li>
+<li><a href="#challenge">Challenges and Lessons Learned</a></li>
+<li><a href="#compliance">Compliance</a></li>
+<li><a href="#ref">References</a></li>
+
+</ul>
+
+</aside>
+
+</div>
+
+
 <footer>
-    <p>Life on Land Project</p>
 
-    <div class="footer-links">
-        <a href="pageEditor_ST4.html">Page Editor</a> |
-        <a href="validation_ST4.html">Validation</a>
-    </div>
+<p>Life on Land Project</p>
 
-    <p>Created by: Onija Dissanayake</p>
+<div class="footer-links">
+<a href="pageEditor_ST4.html">Page Editor</a> |
+<a href="validation_ST4.html">Validation</a>
+</div>
 
-    <a href="#">Accessibility Statement</a>
+<p>Created by: Onija Dissanayake</p>
+
+<a href="#">Accessibility Statement</a>
+
 </footer>
+
 </body>
 </html>
