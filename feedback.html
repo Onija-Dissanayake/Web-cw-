@@ -10,7 +10,7 @@
             
             .heading h1{
                 text-align: center;
-                color: white;
+                color: #c7a46a;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 margin: 10px 0;
             }
@@ -170,6 +170,7 @@
             h2{
                 text-align: center;
                 margin-bottom: 10px;
+                color: #c7a46a;
 
             }
 
@@ -228,6 +229,47 @@
                 padding: 8px;
                 margin: 2px;
             }
+
+            button[type="submit"]{
+            background-color: #c7a46a;
+            margin-top: 10px;
+            border: 3px solid #ccc;
+            outline: none;
+            width: 20%;
+            padding: 8px 8px;
+            border-radius: 20px;
+            font-size: medium;
+            color: rgb(0, 0, 0);
+        }
+
+        button[type="submit"]:hover{
+            background-color: #1b5e20;
+            
+        }
+
+        button[type="reset"]{
+            margin-top: 10px;
+            border: 3px solid #ccc;
+            outline: none;
+            width: 20%;
+            padding: 8px 8px;
+            border-radius: 20px;
+            font-size: medium;
+            color: #021c14;
+            background-color: #999595;
+
+        }
+
+        button[type="submit"]:focus,
+        button[type="reset"]:focus {
+            outline: none;
+            border-color: #285A48;
+        }
+
+        .buttons{
+            text-align: center;
+            gap:40px;
+        }
         </style>
     </head>
     <body>
