@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progressive User Profile</title>
+    <title>Life on Land</title>
 
     <link rel="stylesheet" href="global.css">
 
     <style>
-      
+
       main {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 85vh;;
-        
+
       }
 
       .container {
@@ -98,10 +98,14 @@
         background: rgba(255, 255, 255, 0.08);
         border-radius: 20px;
         font-size: 12px;
+        color: white;
       }
 
       .step.active{
-        background:#c7a46a;
+
+        border:2px solid #c7a46a;
+
+
       }
 
       #summary {
@@ -120,7 +124,7 @@
 
       h3 {
         margin-bottom: 15px;
-      } 
+      }
 
 
     </style>
@@ -128,172 +132,286 @@
 
   <body>
     <!-- HEADER -->
-<header>
-    <div class="pill">
-    <img src="https://images.unsplash.com/vector-1753953988678-284e5ea345d5?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Forest representing life on land">        
-    <h1>Life on Land</h1>
-    </div>
+    <header>
+      <div class="pill">
+        <img src="https://images.unsplash.com/vector-1753953988678-284e5ea345d5?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Forest representing life on land">
+        <h1>Life on Land</h1>
+      </div>
 
-    <!-- NAVIGATION -->
-    <nav>
+      <!-- NAVIGATION -->
+      <nav>
         <ul class="navigation-links">
-            <li><a href="home.html" >Home</a></li>
-            <li><a href="ais.html">AIS</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="user_profile.html" class="active">User Profile</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="team.html">Team Page</a></li>
-            <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="home.html" >Home</a></li>
+          <li><a href="ais.html">AIS</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="user_profile.html" class="active">User Profile</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="team.html">Team Page</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
         </ul>
-    </nav>
-</header>
+      </nav>
+    </header>
 
 
     <main>
-    <div class="container">
-      <h1 id="title"> User Profile</h1> 
+      <div class="container">
+        <h1 id="title"> User Profile</h1>
 
-      <p class="description">
-        Start building your profile by clicking the "Start / Continue Profile" button.
-      </p>
+        <p class="description">
+          Start building your profile by clicking the "Start / Continue Profile" button.
+        </p>
 
-      <div class="buttons">
-        <button onclick="startProfile()">Start / Continue Profile</button>
-        <button class="reset" onclick="resetProfile()">Reset Profile</button>
+        <div class="buttons">
+          <button onclick="startProfile()">Start / Continue Profile</button>
+          <button class="reset" onclick="resetProfile()">Reset Profile</button>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+
+        <div class="progress-text" id="progressText">
+          Completion: 0%
+        </div>
+
+        <div class="steps">
+          <button class="step" id="step1">Step 1: Basics</button>
+          <button class="step" id="step2">Step 2: Interests</button>
+          <button class="step" id="step3">Step 3: Actions</button>
+        </div>
+
+        <div class="profile-summary" id="summary">
+          <h3>Your Profile</h3>
+
+          <div><b>Name:</b> <span id="sName"></span></div>
+          <div><b>Email:</b> <span id="sEmail"></span></div>
+          <div><b>Local Area:</b> <span id="sArea"></span></div>
+
+          <div><b>Favourite Activity:</b> <span id="sActivity"></span></div>
+          <div><b>Favourite Ecosystem:</b> <span id="sEco"></span></div>
+          <div><b>Favourite Animal:</b> <span id="sAnimal"></span></div>
+
+          <div><b>Recycle:</b> <span id="sRecycle"></span></div>
+          <div><b>Environmental Action:</b> <span id="sAction"></span></div>
+          <div><b>Environmental Goal:</b> <span id="sGoal"></span></div>
+        </div>
       </div>
-
-      <div class="progress-bar">
-        <div class="progress" id="progress"></div>
-      </div>
-
-      <div class="progress-text" id="progressText">
-        Completion: 0%
-      </div>
-
-      <div class="steps">
-        <div class="step" id="step1">Step 1: Basics</div>
-        <div class="step" id="step2">Step 2: Interests</div>
-        <div class="step" id="step3">Step 3: Actions</div>
-      </div>
-
-      <div class="profile-summary" id="summary">
-        <h3>Your Profile</h3>
-
-        <div><b>Name:</b> <span id="sName"></span></div>
-        <div><b>Username:</b> <span id="sUsername"></span></div>
-        <div><b>Local Area:</b> <span id="sArea"></span></div>
-
-        <div><b>Favourite Activity:</b> <span id="sActivity"></span></div>
-        <div><b>Favourite Ecosystem:</b> <span id="sEco"></span></div>
-        <div><b>Favourite Animal:</b> <span id="sAnimal"></span></div>
-
-        <div><b>Recycle:</b> <span id="sRecycle"></span></div>
-        <div><b>Environmental Action:</b> <span id="sAction"></span></div>
-        <div><b>Environmental Goal:</b> <span id="sGoal"></span></div>
-      </div>
-    </div>
-</main>
+    </main>
 
     <!-- FOOTER -->
-<footer>
-    <p>Life on Land Project</p>
+    <footer>
+      <p>Life on Land Project</p>
 
-    <div class="footer-links">
+      <div class="footer-links">
         <a href="pageEditor_ST4.html">Page Editor</a> |
         <a href="validation_ST4.html">Validation</a>
-    </div>
+      </div>
 
-    <p>Created by: Onija Dissanayake</p>
+      <p>Created by: Onija Dissanayake</p>
 
-    <a href="#">Accessibility Statement</a>
-</footer>
-
-
+      <a href="#">Accessibility Statement</a>
+    </footer>
 
     <script>
+
       let completedPrompts = 0;
 
-      let name, username, area, activity, ecosystem, animal, recycle, action, goal; 
+      let name="", email="", area="";
+      let activity="", ecosystem="", animal="";
+      let recycle="", action="", goal="";
+
+      /* UPDATE PROGRESS BAR */
 
       function updateProgress() {
+
         let percent = (completedPrompts / 9) * 100;
+
         document.getElementById("progress").style.width = percent + "%";
+
         document.getElementById("progressText").innerText =
-          "Completion: " + Math.round(percent) + "%";
+        "Completion: " + Math.round(percent) + "%";
+
       }
+
+
+      /* START PROFILE */
 
       function startProfile() {
+
         if (completedPrompts === 0) {
           step1();
-        } else if (completedPrompts === 9) {
+        }
+
+        else if (completedPrompts < 9) {
+          alert("Profile already started. Click steps to continue editing.");
+        }
+
+        else {
           alert("Your profile is already complete! You can reset to start over.");
         }
+
       }
 
-      function step1(){ 
-        /* STEP 1 */
-         name = prompt("What is your name?");
-         username = prompt("Choose a username:");
-         area = prompt("Where are you from?");
 
-        completedPrompts+=3; 
+      /* STEP 1 */
+
+      function step1(){
+
+        let answered = false;
+        let answer;
+
+        answer = prompt("What is your name?", name);
+        if(answer !== null && answer !== ""){
+          if(!name) completedPrompts++;
+          name = answer;
+          answered = true;
+        }
+
+        answer = prompt("What is your email address?", email);
+        if(answer !== null && answer !== ""){
+          if(!email) completedPrompts++;
+          email = answer;
+          answered = true;
+        }
+
+        answer = prompt("Where are you from?", area);
+        if(answer !== null && answer !== ""){
+          if(!area) completedPrompts++;
+          area = answer;
+          answered = true;
+        }
+
         updateProgress();
 
-        document.getElementById("step1").classList.add("active");
+        /* highlight only if something answered */
 
-        setTimeout(step2, 200);
+        if(answered){
+          document.getElementById("step1").classList.add("active");
+        }
+
+        setTimeout(step2,200);
+
       }
+
+
+      /* STEP 2 */
 
       function step2(){
-        /* STEP 2 */
-         activity = prompt("Favourite nature activity?");
-         ecosystem = prompt("Favourite ecosystem?");
-         animal = prompt("Favourite wildlife animal?");
-        completedPrompts+=3; 
+
+        let answered = false;
+        let answer;
+
+        answer = prompt("Favourite nature activity?", activity);
+        if(answer !== null && answer !== ""){
+          if(!activity) completedPrompts++;
+          activity = answer;
+          answered = true;
+        }
+
+        answer = prompt("Favourite ecosystem?", ecosystem);
+        if(answer !== null && answer !== ""){
+          if(!ecosystem) completedPrompts++;
+          ecosystem = answer;
+          answered = true;
+        }
+
+        answer = prompt("Favourite wildlife animal?", animal);
+        if(answer !== null && answer !== ""){
+          if(!animal) completedPrompts++;
+          animal = answer;
+          answered = true;
+        }
+
         updateProgress();
 
-        document.getElementById("step2").classList.add("active");
+        /* highlight only if answered */
 
-        setTimeout(step3, 200);
+        if(answered){
+          document.getElementById("step2").classList.add("active");
+        }
+
+        setTimeout(step3,200);
 
       }
+
+
+      /* STEP 3 */
 
       function step3(){
-        
 
-        /* STEP 3 */
-         recycle = prompt("Do you recycle?");
-         action = prompt("How do you help the environment?");
-         goal = prompt("What environmental goal do you have?");
+        let answered = false;
+        let answer;
 
-        completedPrompts+=3;
+        answer = prompt("Do you recycle?", recycle);
+        if(answer !== null && answer !== ""){
+          if(!recycle) completedPrompts++;
+          recycle = answer;
+          answered = true;
+        }
+
+        answer = prompt("How do you help the environment?", action);
+        if(answer !== null && answer !== ""){
+          if(!action) completedPrompts++;
+          action = answer;
+          answered = true;
+        }
+
+        answer = prompt("What environmental goal do you have?", goal);
+        if(answer !== null && answer !== ""){
+          if(!goal) completedPrompts++;
+          goal = answer;
+          answered = true;
+        }
+
         updateProgress();
 
-        document.getElementById("step3").classList.add("active");
+        /* highlight only if answered */
 
-        setTimeout(showSummary, 200);
-    }
+        if(answered){
+          document.getElementById("step3").classList.add("active");
+        }
+
+        setTimeout(showSummary,200);
+
+      }
+
+
+      /* SHOW SUMMARY */
 
       function showSummary(){
-        /* SHOW SUMMARY */
+
         document.getElementById("summary").style.display = "block";
 
-        document.getElementById("sName").textContent = name;
-        document.getElementById("sUsername").textContent = username;
-        document.getElementById("sArea").textContent = area;
+        if(name) document.getElementById("sName").textContent = name;
+        if(email) document.getElementById("sEmail").textContent = email;
+        if(area) document.getElementById("sArea").textContent = area;
 
-        document.getElementById("sActivity").textContent = activity;
-        document.getElementById("sEco").textContent = ecosystem;
-        document.getElementById("sAnimal").textContent = animal;
+        if(activity) document.getElementById("sActivity").textContent = activity;
+        if(ecosystem) document.getElementById("sEco").textContent = ecosystem;
+        if(animal) document.getElementById("sAnimal").textContent = animal;
 
-        document.getElementById("sRecycle").textContent = recycle;
-        document.getElementById("sAction").textContent = action;
-        document.getElementById("sGoal").textContent = goal;
+        if(recycle) document.getElementById("sRecycle").textContent = recycle;
+        if(action) document.getElementById("sAction").textContent = action;
+        if(goal) document.getElementById("sGoal").textContent = goal;
+
       }
+
+
+      /* RESET PROFILE */
 
       function resetProfile() {
+
         location.reload();
+
       }
+
+
+      /* RETURN TO STEPS */
+
+      document.getElementById("step1").onclick = step1; 
+      document.getElementById("step2").onclick = step2;
+      document.getElementById("step3").onclick = step3;
+
     </script>
   </body>
 </html>
