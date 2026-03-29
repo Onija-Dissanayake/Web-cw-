@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor - Rusira Makumbura</title>
+    
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="pageEditor_validator.css">
+</head>
+
+<body>
+
+<header id="top">
+    <div class="pill">
+        <img src="https://images.unsplash.com/vector-1753953988678-284e5ea345d5?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Forest representing life on land">
+        <h1>Life on Land</h1>
+    </div>
+
+    <nav>
+        <ul class="navigation-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="ais.html">AIS</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="user_profile.html">User Profile</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="team.html">Team Page</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="stud">
+    <h2>Rusira Makumbura – Student 3</h2>
+    <p>Role: Content & User Interaction Developer (Feedback Page, Team Page, and Content Page)</p>
+</section>
+
+<div class="container">
+
+<main>
+
+    <section>
+        <h2 id="feedback">Feedback Page</h2>
+
+        <h3>Technical Description</h3>
+        <p>
+            The Feedback page is a multi-functional layout developed using HTML, CSS, and JavaScript. It serves as both a directory for community programs and a platform for user interaction through a feedback form. The upper section features a filtering layout and interactive program cards with CSS scale and box-shadow hover effects.
+        </p>
+        <p>
+            The form section was built using semantic HTML fieldsets and input types (email, tel, date). JavaScript was heavily utilized to provide client-side form validation. This includes checking for empty fields, verifying email format, and displaying dynamic error messages. 
+        </p>
+        <p>
+            Additionally, an event listener was implemented on the textarea to create a real-time character counter that updates as the user types, restricting the message to 150 characters.
+        </p>
+
+        <h3>Accessibility</h3>
+        <p>
+            Accessibility was ensured by explicitly linking `<label>` elements to their corresponding inputs using visual layout and semantic structure. The form validation provides clear, text-based error messages rather than relying solely on color changes, making it accessible for visually impaired users. Good contrast was maintained across the form elements.
+        </p>
+
+        <h3>Link to the validation page</h3>
+        <p><a href="validation_ST3.html#feedbackVal">View validation for the Feedback Page</a></p>
+
+        <h3>Link to the page</h3>
+        <p><a href="feedback.html">Open the Feedback Page</a></p>
+    </section>
+
+    <section>
+        <h2 id="team">Team Page</h2>
+
+        <h3>Technical Description</h3>
+        <p>
+            The Team page uses advanced CSS techniques to present the project contributors. The layout is built using CSS Flexbox, ensuring the profile cards wrap and align symmetrically across different screen sizes. 
+        </p>
+        <p>
+            A modern "glassmorphism" effect was achieved on the cards using a combination of semi-transparent RGBA backgrounds, borders, and the `backdrop-filter: blur()` property. Complex CSS hover interactions were implemented, including a dark overlay that slides up seamlessly using `transform: translateY()` and `opacity` transitions to reveal the student's role and contributions.
+        </p>
+        <p>
+            Scalable Vector Graphics (SVG) were embedded directly into the HTML to render social media icons, ensuring they remain crisp on all displays. Fill colors on these SVGs transition smoothly on hover.
+        </p>
+
+        <h3>Accessibility</h3>
+        <p>
+            Alternative text (`alt` attributes) was provided for all team member portrait images. The contrast ratio between the text on the dark overlay and the background was maximized to ensure readability. Semantic heading levels (h2, h3, h4) were strictly maintained.
+        </p>
+
+        <h3>Link to the validation page</h3>
+        <p><a href="validation_ST3.html#teamVal">View validation for the Team Page</a></p>
+
+        <h3>Link to the page</h3>
+        <p><a href="team.html">Open the Team Page</a></p>
+    </section>
+
+    <section>
+        <h2 id="content">Content Page (Student 3)</h2>
+
+        <h3>Technical Description</h3>
+        <p>
+            The content page focuses on "Solutions & Actions for Life on Land." The page is structured into distinct thematic sections using semantic `<section>`, `<h3>`, and `<p>` tags. 
+        </p>
+        <p>
+            A key feature of this page is the internal navigation menu positioned at the top. This was achieved using HTML anchor links (`href="#id"`) that map directly to the IDs of corresponding sections, allowing users to jump directly to specific topics like Sustainable Forestry or Reforestation.
+        </p>
+        <p>
+            A fixed "Go to Top" button was implemented using CSS `position: fixed;` to remain visible in the bottom right corner, significantly enhancing user navigation on longer scrollable pages.
+        </p>
+
+        <h3>Accessibility</h3>
+        <p>
+            Accessibility was addressed by maintaining a logical document outline. All embedded images relating to the topics have descriptive alt text to provide context for screen readers. The pill-shaped internal navigation links feature strong contrast against the background and clear focus/hover states for keyboard and mouse users.
+        </p>
+
+        <h3>Link to the validation page</h3>
+        <p><a href="validation_ST3.html#contentVal">View validation for the Content Page</a></p>
+
+        <h3>Link to the page</h3>
+        <p><a href="content_ST3.html">Open the Content Page</a></p>
+    </section>
+
+    <section>
+        <h2 id="challenge">Challenges and Lessons Learned</h2>
+        <p>
+            One of the primary challenges was implementing the client-side JavaScript validation for the feedback form. Ensuring the error messages appeared dynamically without resetting the page required a deep dive into event listeners and the `e.preventDefault()` method.
+        </p>
+        <p>
+            Another challenge was perfecting the glassmorphism and overlay hover effects on the Team page. Balancing the z-index so that social icons remained clickable while the text overlay appeared required precise CSS structuring. Through this, I significantly improved my understanding of CSS positioning, transitions, and DOM manipulation.
+        </p>
+    </section>
+
+    <section>
+        <h2 id="compliance">Compliance</h2>
+        <p>
+            The developed pages comply with standard web publishing guidelines. Semantic HTML5 tags were utilized properly to construct the document tree, enhancing both SEO and accessibility.
+        </p>
+        <p>
+            Design and structure were strictly separated by using external CSS stylesheets. The code has been checked against W3C validators to ensure no structural anomalies exist, and all media elements are supported by accessible fallback text.
+        </p>
+    </section>
+
+    <section>
+        <h2 id="group">Group Meetings and Individual Contribution Log</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="6">Group Meetings and Contribution Log</th>
+                </tr>
+                <tr>
+                    <th>Meeting</th>
+                    <th>Date & Time</th>
+                    <th>Format</th>
+                    <th>Objective</th>
+                    <th>Attended</th>
+                    <th>Your Individual Contribution</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>3 Feb 2026</td>
+                    <td>Face-to-face</td>
+                    <td>Discuss project topic and assign roles</td>
+                    <td>Yes</td>
+                    <td>I agreed to take on the Feedback/Program page and the Team page design.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>10 Feb 2026</td>
+                    <td>Online</td>
+                    <td>Discuss website design and layout</td>
+                    <td>Yes</td>
+                    <td>I suggested a glassmorphism style for the team profiles to match the theme.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>17 Feb 2026</td>
+                    <td>Online</td>
+                    <td>Review progress</td>
+                    <td>Yes</td>
+                    <td>I presented the base structure of the Feedback form and program cards.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>24 Feb 2026</td>
+                    <td>Face-to-face</td>
+                    <td>Integration of pages</td>
+                    <td>Yes</td>
+                    <td>I integrated my JavaScript validation into the main stylesheet structure.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>5 Mar 2026</td>
+                    <td>Online</td>
+                    <td>Testing and improvements</td>
+                    <td>Yes</td>
+                    <td>I fixed z-index issues on the team page hover effects and refined form inputs.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>15 Mar 2026</td>
+                    <td>Online</td>
+                    <td>Final review</td>
+                    <td>Yes</td>
+                    <td>I completed my Content page and updated my Page Editor documentation.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2 id="ref">References</h2>
+        <ul class="ref">
+            <li>Duckett, J. (2011) HTML and CSS: Design and Build Websites. John Wiley & Sons.</li>
+            <li>W3Schools (2025) HTML & JS Tutorial. Available at: <a href="https://www.w3schools.com/">https://www.w3schools.com/</a></li>
+            <li>MDN Web Docs (2025) CSS Backdrop-filter & Transforms. Available at: <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a></li>
+        </ul>
+    </section>
+
+    <p class="top"><a href="#top">Go top</a></p>
+
+</main>
+
+<aside>
+    <h3>Pages Developed by Me</h3>
+    <ul class="top-level-ul">
+        <li><a href="#feedback">Feedback Page</a></li>
+        <li><a href="#team">Team Page</a></li>
+        <li><a href="#content">Content Page</a></li>
+        <li><a href="#challenge">Challenges & Lessons Learned</a></li>
+        <li><a href="#compliance">Compliance</a></li>
+        <li><a href="#ref">References</a></li>
+    </ul>
+</aside>
+
+</div>
+
+<footer>
+    <p>Life on Land Project</p>
+    <div class="footer-links">
+        <a href="pageEditor_ST3.html">Page Editor</a> |
+        <a href="validation_ST3.html">Validation</a>
+    </div>
+    <p>Created by: Rusira Makumbura</p>
+    <a href="#">Accessibility Statement</a>
+</footer>
+
+</body>
+</html>
