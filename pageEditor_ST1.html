@@ -3,281 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life on Land - Page Editor (Student 1)</title>
+    <title>Page Editor - Thisal Pathirana</title>
 
-    <link rel="stylesheet" href="global.css">
-
-    <style>
-        .editor-main {
-            background-color: rgba(255, 255, 255, 0.95);
-            color: #333;
-            border-radius: 10px;
-            padding: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .editor-main h1, .editor-main h2, .editor-main h3 {
-            color: #1b5e20;
-            text-shadow: none;
-        }
-
-        .editor-main h2 {
-            border-bottom: 2px solid #c7a46a;
-            padding-bottom: 10px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
-
-        .editor-nav {
-            background: #e8f5e9;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #c8e6c9;
-            margin-bottom: 40px;
-        }
-
-        .editor-nav ul {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-        }
-
-        .editor-nav a {
-            color: #2e7d32;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .editor-nav a:hover {
-            text-decoration: underline;
-            color: #1b5e20;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid #2e7d32;
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #2e7d32;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f1f8e9;
-        }
-
-        .live-link {
-            display: inline-block;
-            background: #c7a46a;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .live-link:hover {
-            background: #1b5e20;
-        }
-    </style>
+    <link rel="stylesheet" href="global.css"> 
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> 
 </head>
-
 <body>
-
-<header>
-    <div class="pill">
-        <img src="https://images.unsplash.com/vector-1753953988678-284e5ea345d5?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Forest representing life on land">
-        <h1>Life on Land</h1>
-    </div>
-
-    <nav>
-        <ul class="navigation-links">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="ais.html">AIS</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="user_profile.html">User Profile</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="team.html">Team Page</a></li>
-            <li><a href="sitemap.html">Sitemap</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-    <div class="editor-main">
-        <h1>Page Editor</h1>
-        <p><strong>Student Name:</strong> Thisal Pathirana</p>
-        <p><strong>Role:</strong> Student 1 (Template & Global CSS, Home Page, Gallery, Content Page)</p>
-
-        <nav class="editor-nav">
-            <h3>Table of Contents</h3>
-            <ul>
-                <li><a href="#tasks">1. Completed Pages & Tasks</a></li>
-                <li><a href="#technical">2. Technical Description</a></li>
-                <li><a href="#challenges">3. Challenges & Lessons Learned</a></li>
-                <li><a href="#accessibility">4. Accessibility Considerations</a></li>
-                <li><a href="#janet">5. Compliance with JANET Regulations</a></li>
-                <li><a href="#meetings">6. Group Meetings & Contribution Log</a></li>
-                <li><a href="#references">7. References</a></li>
+    
+    <header id="top">
+        <div class="pill">
+            <img src="https://images.unsplash.com/vector-1753953988678-284e5ea345d5?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Forest representing life on land">        
+            <h1>Life on Land</h1>
+        </div>
+        <nav>
+            <ul class="navigation-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="ais.html">AIS</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="user_profile.html">User Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="team.html">Team Page</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
             </ul>
         </nav>
+    </header>
 
-        <section id="tasks">
-            <h2>1. Completed Pages & Tasks</h2>
-            <ul>
-                <li>Shared HTML Template & Global CSS (`global.css`)</li>
-                <li>Home Page (`home.html`)</li>
-                <li>Interactive Gallery (`gallery.html`)</li>
-                <li>Content Page (`content_ST1.html`)</li>
+    <section class="stud" style="padding: 20px; background-color: rgba(255,255,255,0.1); color: white; text-align: center; margin-top: 20px;">
+        <h2>Thisal Pathirana | Team: [Team Name] | Role: Student 1 (Template, Home, Gallery, Content)</h2>
+    </section>
+
+    <div class="container" style="display: flex; gap: 20px; padding: 30px; color: white;">
+        <main style="flex: 3; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; backdrop-filter: blur(10px);">
+
+            <section>
+                <h2 id="home" style="color: #c7a46a; border-bottom: 1px solid #c7a46a; padding-bottom: 5px;">Home page</h2>
+                    <h3 style="color: #a5d6a7; margin-top: 15px;">Technical Description</h3>
+                        <p>The Home page uses the shared semantic HTML template (`&lt;header&gt;`, `&lt;nav&gt;`, `&lt;main&gt;`, `&lt;footer&gt;`). I implemented embedded CSS to style page-specific elements without overriding `global.css`. I utilised CSS Flexbox for the central information cards to ensure they sit side-by-side, and CSS Grid (`grid-template-columns: repeat(4, 1fr)`) to create the structured 4-column layout for the bottom gallery links. CSS transitions were applied to images to create a scale effect on hover.</p> 
+                    
+                    <h3 style="color: #a5d6a7; margin-top: 15px;">Accessibility</h3>
+                        <p>Accessibility was addressed by ensuring high contrast between the white text and dark green backgrounds. Every image utilizes descriptive `alt` attributes (e.g., "Forest conservation") so screen readers can interpret the visual context. Semantic structure is strictly maintained.</p>
+                    
+                    <h3 style="color: #a5d6a7; margin-top: 15px;">Link to the validation page</h3> 
+                        <p><a href="validation_ST1.html#homeVal" style="color: #c7a46a;">View Home Page Validation</a></p> 
+
+                    <h3 style="color: #a5d6a7; margin-top: 15px;">Link to the page</h3>
+                        <p><a href="home.html" style="color: #c7a46a;" target="_blank">View Live Home Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="gallery" style="color: #c7a46a; border-bottom: 1px solid #c7a46a; padding-bottom: 5px; margin-top: 30px;">Gallery Page</h2>
+                    <h3 style="color: #a5d6a7; margin-top: 15px;">Technical Description</h3>
+                        <p>The Gallery uses a 2-column CSS Grid layout for the thumbnails. The core functionality relies on JavaScript interacting with custom HTML `data-` attributes (`data-title`, `data-desc`, `data-img`). When a thumbnail is clicked, JavaScript extracts these attributes and dynamically populates a hidden modal `&lt;div&gt;`. The modal's visibility is toggled by adding/removing a `.show` CSS class. DOM manipulation is also used to satisfy the user customization requirement, allowing users to alter the modal's background color and font family via button clicks.</p> 
+
+                    <h3 style="color: #a5d6a7; margin-top: 15px;">Accessibility</h3>
+                        <p>Alt text is provided for all gallery thumbnails. The JavaScript modal includes a highly visible close button (`&times;`) and an event listener that allows users to close the modal by clicking anywhere outside of it, ensuring users don't get trapped in the extended view.</p>
+
+                    <h3 style="color: #a5d6a7; margin-top: 15px;">Link to the validation page</h3> 
+                        <p><a href="validation_ST1.html#galleryVal" style="color: #c7a46a;">View Gallery Validation</a></p> 
+                        
+                    <h3 style="color: #a5d6a7; margin-top: 15px;">Link to the page</h3>
+                        <p><a href="gallery.html" style="color: #c7a46a;" target="_blank">View Live Gallery Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="content" style="color: #c7a46a; border-bottom: 1px solid #c7a46a; padding-bottom: 5px; margin-top: 30px;">Content Page</h2>
+                    <h3 style="color: #a5d6a7; margin-top: 15px;">Technical Description</h3>
+                        <p>This page features long-form text structured sequentially with `&lt;h1&gt;`, `&lt;h2&gt;`, and `&lt;h3&gt;` tags. I implemented an internal navigation menu using anchor links (`href="#id"`) that map to specific `id` attributes on the `&lt;section&gt;` tags. A "Go to Top" button was created using CSS `position: fixed` to keep it accessible in the viewport regardless of scroll depth. Images were styled centrally with borders and box-shadows to fit the visual identity.</p> 
+
+                    <h3 style="color: #a5d6a7; margin-top: 15px;">Accessibility</h3>
+                        <p>The logical heading hierarchy makes document navigation seamless for screen readers. The internal navigation list offers an immediate skip-link alternative to scrolling, enhancing usability for keyboard navigators.</p>
+
+                    <h3 style="color: #a5d6a7; margin-top: 15px;">Link to the validation page</h3> 
+                        <p><a href="validation_ST1.html#contentVal" style="color: #c7a46a;">View Content Validation</a></p> 
+                        
+                    <h3 style="color: #a5d6a7; margin-top: 15px;">Link to the page</h3>
+                        <p><a href="content_ST1.html" style="color: #c7a46a;" target="_blank">View Live Content Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge" style="color: #c7a46a; border-bottom: 1px solid #c7a46a; padding-bottom: 5px; margin-top: 30px;">Challenges and Lessons Learned</h2>
+                    <p>Coordinating the `global.css` file across the team was an early challenge. Because multiple team members needed to link to the same stylesheet, we had to ensure our Git workflow was solid. Resolving minor merge conflicts when pulling changes in VS Code taught me the importance of clear communication and modular CSS design. Technically, managing the JavaScript modal overlay on the Gallery page without blocking the underlying page elements required careful tuning of `z-index` and `opacity` transitions.</p> 
+            </section>
+
+            <section>
+                <h2 id="compliance" style="color: #c7a46a; border-bottom: 1px solid #c7a46a; padding-bottom: 5px; margin-top: 30px;">Compliance</h2>
+                    <p>All pages created are fully compliant with JANET regulations. The content strictly adheres to academic and educational purposes regarding the UN Sustainable Development Goals. No commercial, offensive, or illegal content is hosted. Additionally, all external assets (such as images) were ethically sourced from royalty-free platforms like Unsplash and are referenced accordingly, avoiding copyright infringement.</p> 
+            </section>
+
+            <section>
+                <h2 id="group" style="color: #c7a46a; border-bottom: 1px solid #c7a46a; padding-bottom: 5px; margin-top: 30px;">Group Meetings and Individual Contribution Log</h2>
+                        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; color: white; background: rgba(0,0,0,0.3);">
+                            <thead>
+                                <tr style="background-color: #2e7d32;">
+                                    <th style="padding: 10px; border: 1px solid #c7a46a;">Meeting</th>
+                                    <th style="padding: 10px; border: 1px solid #c7a46a;">Date &amp; Time</th>
+                                    <th style="padding: 10px; border: 1px solid #c7a46a;">Format</th>
+                                    <th style="padding: 10px; border: 1px solid #c7a46a;">Objective</th>
+                                    <th style="padding: 10px; border: 1px solid #c7a46a;">Attended</th>
+                                    <th style="padding: 10px; border: 1px solid #c7a46a;">Your Individual Contribution</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">1</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">2 Feb 2026</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Face-to-face</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Agree SDG and assign roles</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Yes</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">I agreed to take responsibility for the shared Template, Global CSS, and Home Page.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">2</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">10 Feb 2026</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Online</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Review design and Global CSS</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Yes</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">I presented the dark green/gold colour palette and initialized the shared repository.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">3</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">24 Feb 2026</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Hybrid</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Gallery JavaScript integration</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Yes</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Demonstrated how the modal JS works using `data-` attributes so others understood the structure.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">4</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">10 Mar 2026</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Online</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Content Page review</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Yes</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Ensured everyone's internal navigation anchors were working correctly in their content pages.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">5</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">20 Mar 2026</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Face-to-face</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Validation checking</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Yes</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Ran my HTML files through the W3C validator and fixed minor unclosed tag errors.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">6</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">28 Mar 2026</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Online</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Final integration & packaging</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Yes</td>
+                                    <td style="padding: 10px; border: 1px solid #c7a46a;">Checked that all navigation links across my pages connected properly to my teammates' pages before zipping.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="font-size: 0.9em; margin-top: 10px;"><em>* Note: Update [Team Name] at the top, and adjust meeting dates/formats if they differ from your actual schedule.</em></p>
+            </section>
+
+            <section>
+                <h2 id="ref" style="color: #c7a46a; border-bottom: 1px solid #c7a46a; padding-bottom: 5px; margin-top: 30px;">References</h2>
+                    <ul class="ref" style="list-style-position: inside;">
+                        <li>Unsplash (2026) <i>Beautiful Free Images & Pictures.</i> Available at: <a href="https://unsplash.com/" style="color: #a5d6a7;">https://unsplash.com/</a> (Last accessed: 29 Mar 2026).</li>
+                        <li>W3Schools (2026) <i>CSS Grid Layout Module.</i> Available at: <a href="https://www.w3schools.com/css/css_grid.asp" style="color: #a5d6a7;">https://www.w3schools.com/css/css_grid.asp</a> (Last accessed: 29 Mar 2026).</li>
+                        <li>MDN Web Docs (2026) <i>Using data attributes.</i> Available at: <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" style="color: #a5d6a7;">MDN Web Docs</a> (Last accessed: 29 Mar 2026).</li>
+                    </ul>
+            </section>
+
+            <p class="top" style="margin-top: 30px;"><a href="#top" style="color: #c7a46a;">&uarr; Go top</a></p>
+        </main>
+
+        <aside style="flex: 1; background: rgba(0,0,0,0.4); padding: 20px; border-radius: 10px; height: fit-content;">
+            <h3 style="color: #c7a46a; margin-bottom: 15px;">Core pages developed:</h3>
+            <ul class="top-level-ul" style="list-style: none; padding-left: 0; line-height: 1.8;">
+                <li><strong>Student 1</strong></li>
+                <ul style="list-style: none; padding-left: 15px; margin-bottom: 15px;">
+                    <li><a href="#home" style="color: #a5d6a7; text-decoration: none;">&bull; Home page</a></li>
+                    <li><a href="#gallery" style="color: #a5d6a7; text-decoration: none;">&bull; Gallery</a></li>
+                    <li><a href="#content" style="color: #a5d6a7; text-decoration: none;">&bull; Content</a></li>
+                </ul>
+                <li><a href="#challenge" style="color: #a5d6a7; text-decoration: none;">Challenges & Lessons</a></li>
+                <li><a href="#compliance" style="color: #a5d6a7; text-decoration: none;">Compliance</a></li>
+                <li><a href="#group" style="color: #a5d6a7; text-decoration: none;">Group Meetings</a></li>
+                <li><a href="#ref" style="color: #a5d6a7; text-decoration: none;">References</a></li>
             </ul>
-        </section>
-
-        <section id="technical">
-            <h2>2. Technical Description of Implemented Pages</h2>
-
-            <h3>Shared Template & Global CSS</h3>
-            <p><strong>HTML Structure:</strong> Established the baseline semantic HTML framework using <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> to ensure a consistent layout across the site.</p>
-            <p><strong>CSS Techniques:</strong> Created <code>global.css</code> using a universal selector reset and set the typography to "Poppins". Utilised CSS Flexbox in the header and navigation for horizontal alignment and spacing. Implemented a linear gradient background and glassmorphism effects (using <code>backdrop-filter: blur</code> and <code>rgba</code> backgrounds) for the cards and UI elements.</p>
-            <p><strong>Design Rationale:</strong> The dark green and gold (#c7a46a) colour palette was chosen to reflect the "Life on Land" nature theme while maintaining high contrast for readability.</p>
-
-            <h3>Home Page</h3>
-            <a class="live-link" href="home.html" target="_blank">View Live Home Page &nearr;</a>
-            <a class="live-link" href="validation_ST1.html#home-val">View Validation &rarr;</a>
-            <p><strong>HTML Structure:</strong> Utilised structured <code>&lt;section&gt;</code> tags to separate the intro, information cards, and the visual gallery links.</p>
-            <p><strong>CSS Techniques:</strong> Used embedded CSS to style page-specific elements without conflicting with the global stylesheet. Deployed CSS Grid (<code>grid-template-columns: repeat(4, 1fr)</code>) for the bottom navigation gallery and Flexbox for the central information cards. Added scale transforms on hover to create an interactive feel.</p>
-
-            <h3>Interactive Gallery</h3>
-            <a class="live-link" href="gallery.html" target="_blank">View Live Gallery Page &nearr;</a>
-            <a class="live-link" href="validation_ST1.html#gallery-val">View Validation &rarr;</a>
-            <p><strong>HTML Structure:</strong> Used <code>data-</code> attributes within the gallery items to store dynamic content (titles, descriptions, image paths) which are later retrieved by JavaScript.</p>
-            <p><strong>CSS & JS Techniques:</strong> Built a responsive 2-column grid. The interactive modal was built using a hidden <code>div</code> that toggles a <code>.show</code> class via JavaScript event listeners. JavaScript was also used to fulfill the user customisation requirement, allowing the user to dynamically alter the modal's background colour and font family via DOM manipulation.</p>
-
-            <h3>Content Page</h3>
-            <a class="live-link" href="content_ST1.html" target="_blank">View Live Content Page &nearr;</a>
-            <a class="live-link" href="validation_ST1.html#content-val">View Validation &rarr;</a>
-            <p><strong>HTML Structure:</strong> Heavily relied on semantic headings (<code>&lt;h1&gt;</code> to <code>&lt;h3&gt;</code>) to create a logical document outline detailing the importance of biodiversity.</p>
-            <p><strong>Implementation:</strong> Implemented internal page navigation using anchor links (<code>href="#id"</code>) pointing to specific sections. Added a fixed position "Go to Top" button to enhance user experience on long scrolls.</p>
-        </section>
-
-        <section id="challenges">
-            <h2>3. Challenges & Lessons Learned</h2>
-            <p>One of the main technical challenges was implementing the interactive JavaScript modal on the Gallery page without disrupting the global CSS layout. Initially, the modal overlay was blocking clicks on the main page even when hidden. I resolved this by using a combination of <code>opacity: 0</code> and <code>visibility: hidden</code> in CSS, toggled via JavaScript classes. </p>
-            <p>This process taught me the importance of isolating component states in CSS and how powerful <code>data-</code> attributes can be for passing HTML information directly into JavaScript variables.</p>
-        </section>
-
-        <section id="accessibility">
-            <h2>4. Accessibility Considerations</h2>
-            <ul>
-                <li><strong>Semantic HTML:</strong> Used landmarks like <code>&lt;main&gt;</code> and <code>&lt;nav&gt;</code> to help screen readers navigate the page structure easily.</li>
-                <li><strong>Alt Text:</strong> Ensured every <code>&lt;img&gt;</code> tag includes descriptive <code>alt</code> text (e.g., "Forest representing life on land") for visually impaired users.</li>
-                <li><strong>Visual Contrast:</strong> Selected text colours (white and gold against dark green) that provide high contrast to make reading easier.</li>
-            </ul>
-        </section>
-
-        <section id="janet">
-            <h2>5. Compliance with JANET Regulations</h2>
-            <p>All pages were designed in compliance with JANET regulations. The content is strictly academic, educational, and relevant to the UN SDG "Life on Land". No offensive, commercial, or illegal materials are hosted. Furthermore, all external visual assets (images) were sourced from royalty-free platforms (Unsplash) and are used ethically without violating copyright laws.</p>
-        </section>
-
-        <section id="meetings">
-            <h2>6. Group Meetings & Contribution Log</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Date & Time</th>
-                        <th>Format</th>
-                        <th>Objective</th>
-                        <th>Attended</th>
-                        <th>My Individual Contribution</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>[Insert Date]</td>
-                        <td>Online (Teams)</td>
-                        <td>Agree SDG and assign roles</td>
-                        <td>Yes</td>
-                        <td>Agreed to take responsibility for the shared Template, Global CSS, and Home Page.</td>
-                    </tr>
-                    <tr>
-                        <td>[Insert Date]</td>
-                        <td>Face-to-face</td>
-                        <td>Review design and Global CSS</td>
-                        <td>Yes</td>
-                        <td>Presented the dark green/gold colour palette and distributed the `global.css` file to the team.</td>
-                    </tr>
-                    <tr>
-                        <td>[Insert Date]</td>
-                        <td>Online</td>
-                        <td>Gallery JavaScript integration</td>
-                        <td>Yes</td>
-                        <td>Demonstrated how the modal JS works so others could understand the structure.</td>
-                    </tr>
-                    <tr>
-                        <td>[Insert Date]</td>
-                        <td>Hybrid</td>
-                        <td>Content Page review</td>
-                        <td>Yes</td>
-                        <td>Ensured everyone's internal navigation anchors were working correctly.</td>
-                    </tr>
-                    <tr>
-                        <td>[Insert Date]</td>
-                        <td>Face-to-face</td>
-                        <td>Validation checking</td>
-                        <td>Yes</td>
-                        <td>Ran my HTML files through the W3C validator and fixed minor unclosed tag errors.</td>
-                    </tr>
-                    <tr>
-                        <td>[Insert Date]</td>
-                        <td>Online</td>
-                        <td>Final integration and coursework packaging</td>
-                        <td>Yes</td>
-                        <td>Checked that all navigation links across my pages connected properly to my teammates' pages.</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p><em>Note: Please update the dates and specific details above to match your actual team meetings.</em></p>
-        </section>
-
-        <section id="references">
-            <h2>7. References</h2>
-            <ul>
-                <li>Unsplash (2025). <em>Royalty-free images for Web Design</em>. Available at: https://unsplash.com</li>
-                <li>W3Schools (2025). <em>CSS Flexbox Layout Module</em>. Available at: https://www.w3schools.com/css/css3_flexbox.asp</li>
-                <li>MDN Web Docs (2025). <em>Using data attributes</em>. Available at: https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes</li>
-            </ul>
-        </section>
+        </aside>
     </div>
-</main>
 
-<footer>
-    <p>Life on Land Project</p>
-
-    <div class="footer-links">
-        <a href="pageEditor_ST1.html">Page Editor</a> |
-        <a href="validation_ST1.html">Validation</a>
-    </div>
-
-    <p>Created by: Thisal Pathirana</p>
-
-    <a href="#">Accessibility Statement</a>
-</footer>
-
+    <footer>
+        <p>Life on Land Project</p>
+        <div class="footer-links">
+            <a href="pageEditor_ST1.html">Page Editor</a> |
+            <a href="validation_ST1.html">Validation</a>
+        </div>
+        <p>Created by: Thisal Pathirana</p>
+        <a href="#">Accessibility Statement</a>
+    </footer>
 </body>
 </html>
