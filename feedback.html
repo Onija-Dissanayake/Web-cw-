@@ -23,7 +23,7 @@
                 margin: 20px auto;
                 display: flex;
                 justify-content: flex-end;
-                align-items: right;
+                align-items: flex-end;
                 gap: 10px;
             }
 
@@ -198,7 +198,7 @@
                 background-color: #88c493;           
             }
 
-            input ::placeholder{
+            input::placeholder{
                 color: #000000;
             }
 
@@ -373,7 +373,7 @@
 
             <div class="reviews-grid">
                 <div class="review-card">
-                    <h4>• Great experience!</h4>
+                    <h3>• Great experience!</h3>
                     <p>Learned a lot about protecting forests and wildlife. Very inspiring.<a href="#">See more</a></p>
                     <div class="review-footer">
                     <p>Alex • March 2026 | Rating: 9/10</p>
@@ -381,7 +381,7 @@
                 </div>
 
                 <div class="review-card">
-                    <h4>• Very comfortable</h4>
+                    <h3>• Very comfortable</h3>
                     <p>Easy to understand and focused on caring for nature and land.<a href="#">See more</a></p>
                     <div class="review-footer">
                     <p>Sara • Feb 2026 | Rating: 8/10</p>
@@ -389,7 +389,7 @@
                 </div>
 
                 <div class="review-card">
-                    <h4>• Highly Recommend</h4>
+                    <h3>• Highly Recommend</h3>
                     <p>Useful information about conservation, but could include more details.<a href="#">See more</a></p>
                     <div class="review-footer">
                     <p>John • Jan 2026 | Rating: 9/10</p>
@@ -406,7 +406,7 @@
                     
                     <div class="personalinfo">
                         <label>Full Name:</label><br>
-                        <input type="text" id="Full Name" placeholder="Enter your full name here" required><br>
+                        <input type="text" id="fullName" placeholder="Enter your full name here" required><br>
                         <br>
                         <span class="error" id="nameError"></span>
 
@@ -416,7 +416,7 @@
                         <span class="error" id="emailError"></span>
 
                         <label>Phone Number:</label><br>
-                        <input type="tel" id="Phone no." placeholder="Enter your phone number here" required><br>
+                        <input type="tel" id="phoneNo" placeholder="Enter your phone number here" required><br>
                     <br>
                     </div>
                 </fieldset>
@@ -424,7 +424,7 @@
                 <fieldset>
                     <legend>Feedback</legend>
 
-                    <lable>Message:</lable><br>
+                    <label>Message:</label><br>
                     <textarea id="message" maxlength="150"></textarea><br>
 
                     <p id="counter">150 characters remaining</p><br>
@@ -462,7 +462,7 @@
 
                     e.preventDefault();
 
-                    let name = document.getElementById("Full Name").value.trim();
+                    let name = document.getElementById("fullName").value.trim();
                     let email = document.getElementById("Email").value.trim();
 
                     let valid = true;
@@ -505,7 +505,7 @@
         <!--Note - Change to your own link-->
         <div class="footer-links">
             <a href="pageEditor_ST3.html">Page Editor</a> |
-            <a href="validation_ST1.html">Validation</a>
+            <a href="validation_ST3.html">Validation</a>
         </div>
 
         <p>Created by: Rusira Makumbura</p>
