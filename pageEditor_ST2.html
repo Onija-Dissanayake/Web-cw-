@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor - Pasindu Nimsara</title>
+    
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="pageEditor_validator.css">
+</head>
+
+<body>
+
+<header id="top">
+    <div class="pill">
+        <img src="https://images.unsplash.com/vector-1753953988678-284e5ea345d5?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Forest representing life on land">
+        <h1>Life on Land</h1>
+    </div>
+
+    <nav>
+        <ul class="navigation-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="ais.html">AIS</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="user_profile.html">User Profile</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="team.html">Team Page</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="stud">
+    <h2>Pasindu Nimsara – Student 2</h2>
+    <p>Role: Interactive & Content Developer (Splash Page, AIS Page, and Content Page)</p>
+</section>
+
+<div class="container">
+
+<main>
+
+    <section>
+        <h2 id="splash">Splash Page</h2>
+
+        <h3>Technical Description</h3>
+        <p>
+            The Splash page acts as an engaging entry point for the website. It utilizes CSS Flexbox to vertically and horizontally center the content over a full-viewport background image. I implemented a custom CSS animation (`@keyframes spin`) to create a smooth, infinitely rotating loading indicator.
+        </p>
+        <p>
+            JavaScript was extensively used to handle the page's lifecycle. A `setInterval` function powers the 4-second countdown timer displayed to the user. Once the timer reaches zero, or if the user clicks the "Skip Intro" button, a JavaScript function triggers a CSS opacity transition to fade out the page, followed by a `setTimeout` function that redirects the browser to the main home page.
+        </p>
+
+        <h3>Accessibility</h3>
+        <p>
+            Text readability against the background image is maintained by utilizing strong CSS text-shadows and highly contrasting white fonts. A clear, easily clickable "Skip Intro" button ensures users who rely on keyboards or prefer not to wait can bypass the timed redirect immediately.
+        </p>
+
+        <h3>Link to the validation page</h3>
+        <p><a href="validation_ST2.html#splashVal">View validation for the Splash Page</a></p>
+
+        <h3>Link to the page</h3>
+        <p><a href="splash.html">Open the Splash Page</a></p>
+    </section>
+
+    <section>
+        <h2 id="ais">AIS (Action Impact Score) Page</h2>
+
+        <h3>Technical Description</h3>
+        <p>
+            The AIS page is an interactive tool designed to calculate a user's environmental impact based on their willingness to commit to certain actions. The layout uses CSS Flexbox to arrange the action cards evenly across two sections, incorporating hover effects (`transform` and `box-shadow`) to encourage user interaction.
+        </p>
+        <p>
+            The core functionality is driven by JavaScript. Event listeners are attached to each card using 'querySelectorAll'. When a card is clicked, a 'selected' CSS class is toggled. The script dynamically adds or subtracts predefined impact points based on the card's ID, updates the total score text, and calculates a percentage. This percentage is then applied to the inline `width` style of a custom CSS progress bar to provide immediate visual feedback.
+        </p>
+
+        <h3>Accessibility</h3>
+        <p>
+            The page uses clear, descriptive headings and text within each card so users know exactly what action they are selecting. The visual state of a selected card changes significantly (background color and border changes) to ensure the selection state is visually obvious.
+        </p>
+
+        <h3>Link to the validation page</h3>
+        <p><a href="validation_ST2.html#aisVal">View validation for the AIS Page</a></p>
+
+        <h3>Link to the page</h3>
+        <p><a href="ais.html">Open the AIS Page</a></p>
+    </section>
+
+    <section>
+        <h2 id="content">Content Page (Student 2)</h2>
+
+        <h3>Technical Description</h3>
+        <p>
+            My content page focuses on "Threats to Biodiversity," exploring key topics like Habitat Destruction, Climate Change, Pollution, and Overexploitation. The page uses a clean, linear layout structured with semantic HTML5 tags ('(section)'', '(h3)', '(p)'').
+        </p>
+        <p>
+            To enhance navigation, I created a glassmorphism-styled internal navigation menu at the top of the page. This uses HTML anchor links (`href="#id"`) mapped to the IDs of the specific content sections below. I also implemented a fixed "Go to Top" button utilizing CSS `position: fixed`, which hovers in the bottom-right corner of the viewport to allow quick navigation back to the menu regardless of scroll depth.
+        </p>
+
+        <h3>Accessibility</h3>
+        <p>
+            Semantic heading hierarchies are strictly maintained for screen readers. High-quality images illustrating the threats are accompanied by descriptive `alt` text to ensure visually impaired users understand the context of the visuals. Focus states and color contrasts on the navigation pills were optimized for readability.
+        </p>
+
+        <h3>Link to the validation page</h3>
+        <p><a href="validation_ST2.html#contentVal">View validation for the Content Page</a></p>
+
+        <h3>Link to the page</h3>
+        <p><a href="content_ST2.html">Open the Content Page</a></p>
+    </section>
+
+    <section>
+        <h2 id="challenge">Challenges and Lessons Learned</h2>
+        <p>
+            A major challenge I faced was writing the JavaScript for the AIS page. Ensuring that points were accurately subtracted when a user deselected a card—and preventing the progress bar from breaking if multiple rapid clicks occurred—required careful logic and state management.
+        </p>
+        <p>
+            Additionally, timing the visual fade-out effect on the Splash page with the actual page redirect (`window.location.href`) took some trial and error with `setTimeout` to ensure the transition felt smooth and didn't redirect before the fade finished. These challenges greatly improved my understanding of DOM manipulation and JavaScript timing events.
+        </p>
+    </section>
+
+    <section>
+        <h2 id="compliance">Compliance</h2>
+        <p>
+            All pages I developed follow modern web publishing standards. HTML5 semantic elements were used to structure the DOM effectively.
+        </p>
+        <p>
+            Visual styling is handled via external CSS (`global.css`), maintaining a strict separation of concerns. The code has been validated against W3C standards to ensure cross-browser compatibility and structural integrity.
+        </p>
+    </section>
+
+    <section>
+        <h2 id="group">Group Meetings and Individual Contribution Log</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="6">Group Meetings and Contribution Log</th>
+                </tr>
+                <tr>
+                    <th>Meeting</th>
+                    <th>Date & Time</th>
+                    <th>Format</th>
+                    <th>Objective</th>
+                    <th>Attended</th>
+                    <th>Your Individual Contribution</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>3 Feb 2026</td>
+                    <td>Face-to-face</td>
+                    <td>Discuss project topic and assign roles</td>
+                    <td>Yes</td>
+                    <td>I agreed to develop the Splash page, the interactive AIS tool, and my specific Content page.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>10 Feb 2026</td>
+                    <td>Online</td>
+                    <td>Discuss website design and layout</td>
+                    <td>Yes</td>
+                    <td>I suggested incorporating an interactive element (AIS) to make user engagement higher than a standard site.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>17 Feb 2026</td>
+                    <td>Online</td>
+                    <td>Review progress</td>
+                    <td>Yes</td>
+                    <td>I demonstrated the countdown timer logic for the splash screen and the base structure for the AIS cards.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>24 Feb 2026</td>
+                    <td>Face-to-face</td>
+                    <td>Integration of pages</td>
+                    <td>Yes</td>
+                    <td>I integrated my JavaScript for the AIS progress bar into the global stylesheet format.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>5 Mar 2026</td>
+                    <td>Online</td>
+                    <td>Testing and improvements</td>
+                    <td>Yes</td>
+                    <td>I refined the internal navigation anchor links on my content page and fixed text contrast issues on the splash screen.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>15 Mar 2026</td>
+                    <td>Online</td>
+                    <td>Final review</td>
+                    <td>Yes</td>
+                    <td>I completed the Page Editor documentation for my components and verified all my HTML validation.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2 id="ref">References</h2>
+        <ul class="ref">
+            <li>Duckett, J. (2011) HTML and CSS: Design and Build Websites. John Wiley & Sons.</li>
+            <li>W3Schools (2025) HTML & JS Tutorial. Available at: <a href="https://www.w3schools.com/">https://www.w3schools.com/</a></li>
+            <li>MDN Web Docs (2025) JavaScript Timing Events & DOM. Available at: <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a></li>
+        </ul>
+    </section>
+
+    <p class="top"><a href="#top">Go top</a></p>
+
+</main>
+
+<aside>
+    <h3>Pages Developed</h3>
+    <ul class="top-level-ul">
+        <li><a href="#splash">Splash Page</a></li>
+        <li><a href="#ais">AIS Page</a></li>
+        <li><a href="#content">Content Page</a></li>
+        <li><a href="#challenge">Challenges & Lessons Learned</a></li>
+        <li><a href="#compliance">Compliance</a></li>
+        <li><a href="#ref">References</a></li>
+    </ul>
+</aside>
+
+</div>
+
+<footer>
+    <p>Life on Land Project</p>
+    <div class="footer-links">
+        <a href="pageEditor_ST2.html">Page Editor</a> |
+        <a href="validation_ST2.html">Validation</a>
+    </div>
+    <p>Created by: Pasindu Nimsara</p>
+    <a href="#">Accessibility Statement</a>
+</footer>
+
+</body>
+</html>
