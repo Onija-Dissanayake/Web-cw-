@@ -227,15 +227,28 @@ img{
 </main>
 
 <script>
+//Select all elements with the class "actionCards"
 const actionCards = document.querySelectorAll(".actionCards");
+
+//Variable to keep track of the total score
 let totalScore = 0;
+
+//Maximum possible score 
 const maxScore = 16;
 
+//Function that runs when a card is clicked
 function handleCardClick(event){
+
+    //Get the card that was clicked
     let card = event.currentTarget;
+
+    //Toggle (add/remove) the "selected" class when clicked
     card.classList.toggle("selected");
 
+    //Set default points to 0
     let points = 0;
+
+    //Assign points based on the card's ID
     if(card.id == "1") points = 2;
     if(card.id == "2") points = 1;
     if(card.id == "3") points = 3;
@@ -243,21 +256,31 @@ function handleCardClick(event){
     if(card.id == "5") points = 5;
     if(card.id == "6") points = 1;
 
+    //If the card is selected, add points
+    //If unselected, subtract points
     if(card.classList.contains("selected")){
         totalScore += points;
     } else {
         totalScore -= points;
     }
 
+    //Update the text showing the total score
     document.getElementById("impactScore").textContent = "Total impact score: " + totalScore;
 
+    //Calculate percentage based on max score
     let percentage = (totalScore / maxScore) * 100;
+
+    //Get the progress bar element
     let bar = document.getElementById("bar");
 
+    //Update the width of the progress bar
     bar.style.width = percentage + "%";
+
+    //Show percentage text inside the bar (rounded value)
     bar.textContent = Math.round(percentage) + "%";
 }
 
+//Add click event listener to each card
 actionCards.forEach(card => {
     card.addEventListener("click", handleCardClick);
 });
